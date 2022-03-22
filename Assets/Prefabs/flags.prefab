@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7204093293427732269
+--- !u!1 &7779777719667195870
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7544026367604094359}
-  - component: {fileID: 2681485364601621102}
-  - component: {fileID: 8015137949554904392}
+  - component: {fileID: 6970589472089089380}
+  - component: {fileID: 3259421444634270365}
+  - component: {fileID: 7437197033990637737}
   m_Layer: 0
   m_Name: flags
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7544026367604094359
+--- !u!4 &6970589472089089380
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7204093293427732269}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 7779777719667195870}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.09, y: -0.1908598, z: -0.354}
+  m_LocalScale: {x: 0.27168998, y: 0.27169, z: 0.27168998}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &2681485364601621102
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!137 &3259421444634270365
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7204093293427732269}
+  m_GameObject: {fileID: 7779777719667195870}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,17 +85,17 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.062281787, y: -0.19810987, z: -0.66998017}
     m_Extent: {x: 1.3491473, y: 2.1337287, z: 1.6343945}
   m_DirtyAABB: 0
---- !u!95 &8015137949554904392
+--- !u!95 &7437197033990637737
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7204093293427732269}
+  m_GameObject: {fileID: 7779777719667195870}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df2febbcf36be9c41b01afeefcc6bceb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
