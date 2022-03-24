@@ -772,6 +772,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb08af53087fe8f45bb0889557ead7a4, type: 3}
   m_PrefabInstance: {fileID: 808652292}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &844887578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb08af53087fe8f45bb0889557ead7a4, type: 3}
+  m_PrefabInstance: {fileID: 808652292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &844887579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4564,7 +4569,7 @@ GameObject:
   - component: {fileID: 4416926083347132229}
   - component: {fileID: 4416926083347132231}
   m_Layer: 8
-  m_Name: Ruli
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4615,9 +4620,9 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: 
-  conversationConversant: {fileID: 0}
-  conversationActor: {fileID: 0}
+  conversation: Questioning
+  conversationConversant: {fileID: 844887578}
+  conversationActor: {fileID: 3893294199639930361}
   startConversationEntryID: -1
   exclusive: 0
   replace: 0
@@ -4637,7 +4642,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: c1cc03cd82f6cdb40afbc0575be25564, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 3f02604940c520c4a8197eb68b677bae, type: 2}
 --- !u!114 &4416926083347132229
 MonoBehaviour:
   m_ObjectHideFlags: 0
