@@ -527,9 +527,9 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: 
-  conversationConversant: {fileID: 0}
-  conversationActor: {fileID: 0}
+  conversation: Questioning
+  conversationConversant: {fileID: 685653893}
+  conversationActor: {fileID: 3893294199639930361}
   startConversationEntryID: -1
   exclusive: 0
   replace: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   spritePortrait: {fileID: 0}
   barkUISettings:
     barkUI: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 3}
-    barkUIOffset: {x: 1, y: 2.95, z: 0}
+    barkUIOffset: {x: 1, y: -9.34, z: 0}
   standardDialogueUISettings:
     subtitlePanelNumber: 0
     customSubtitlePanel: {fileID: 0}
@@ -609,6 +609,11 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &685653893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca6a34db82c6f444a8f39af87ba2a7fc, type: 3}
+  m_PrefabInstance: {fileID: 628345886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705332573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7355420030950989052, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
