@@ -1,18 +1,30 @@
-using UnityEngine;
 using UnityEditor;
 
-// ensure class initializer is called whenever scripts recompile
-[InitializeOnLoadAttribute]
-public static class PlayModeStateChangedExample
+[InitializeOnLoad]
+public class DetectPlayModeChanges
 {
-    // register an event handler when the class is initialized
-    static PlayModeStateChangedExample()
+
+    static DetectPlayModeChanges()
     {
-        EditorApplication.playModeStateChanged += LogPlayModeState;
+        EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
     }
 
-    private static void LogPlayModeState(PlayModeStateChange state)
+    private static void OnPlayModeStateChanged(PlayModeStateChange state)
     {
-        Debug.Log(state);
+        switch (state)
+        {
+            case PlayModeStateChange.ExitingEditMode:
+                // Do whatever before entering play mode
+                break;
+            case PlayModeStateChange.EnteredPlayMode:
+                // Do whatever after entering play mode
+                break;
+            case PlayModeStateChange.ExitingPlayMode:
+                // Do whatever before returning to edit mode
+                break;
+            case PlayModeStateChange.EnteredEditMode:
+                // Do whatever after returning to edit mode
+                break;
+        }
     }
 }
