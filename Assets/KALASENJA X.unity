@@ -853,9 +853,9 @@ MonoBehaviour:
   textTable: {fileID: 0}
   alertDuration: 0
   sendMessages: []
-  barkSource: 0
+  barkSource: 2
   barkConversation: 
-  barkText: 
+  barkText: Hello Ruli, Don`t running around at the corridor
   barkTextSequence: 
   barker: {fileID: 0}
   barkTarget: {fileID: 0}
@@ -4883,7 +4883,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Questioning
+  conversation: 
   conversationConversant: {fileID: 844887578}
   conversationActor: {fileID: 3893294199639930361}
   startConversationEntryID: -1
@@ -4932,12 +4932,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624654ff0a68ee844994f728ddf3d991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectAt: 1
+  selectAt: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 1
   distanceFrom: 0
-  maxSelectionDistance: 30
+  maxSelectionDistance: 10
   runRaycasts: 1
   raycastAll: 0
   useDefaultGUI: 1
@@ -4946,7 +4946,7 @@ MonoBehaviour:
   alignment: 1
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  inRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  inRangeColor: {r: 0.9528302, g: 0.21813388, b: 0.10487114, a: 1}
   outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reticle:
     inRange: {fileID: 0}
@@ -5736,8 +5736,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7477981180239321655}
   m_LocalRotation: {x: 0.6272114, y: 0.6272114, z: 0.3265055, w: -0.32650563}
-  m_LocalPosition: {x: 0.10478266, y: 3.631407, z: -0.10933659}
-  m_LocalScale: {x: 2.8743243, y: 2.874324, z: 2.8743243}
+  m_LocalPosition: {x: 0.085261, y: 3.6211, z: -0.34834203}
+  m_LocalScale: {x: 2.3403323, y: 2.3403323, z: 2.3403323}
   m_Children: []
   m_Father: {fileID: 543450653289060101}
   m_RootOrder: 6
@@ -7256,8 +7256,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8963399876642407618}
   m_LocalRotation: {x: -0.70710665, y: 0, z: -0, w: 0.7071069}
-  m_LocalPosition: {x: 0.10478266, y: -3.4313927, z: -0.062245663}
-  m_LocalScale: {x: 6.3844404, y: 6.3844414, z: 6.3844404}
+  m_LocalPosition: {x: 0.085261, y: -2.1295, z: -0.31}
+  m_LocalScale: {x: 5.198339, y: 5.19834, z: 5.198339}
   m_Children: []
   m_Father: {fileID: 543450653289060101}
   m_RootOrder: 2
@@ -10111,8 +10111,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2945298957768375058}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10478266, y: 3.1046352, z: 0.17562011}
-  m_LocalScale: {x: 0.84996456, y: 0.5331697, z: 0.84996456}
+  m_LocalPosition: {x: 0.085261, y: 3.1922, z: -0.11632703}
+  m_LocalScale: {x: 0.69205815, y: 0.43411744, z: 0.69205815}
   m_Children: []
   m_Father: {fileID: 543450653289060101}
   m_RootOrder: 8
