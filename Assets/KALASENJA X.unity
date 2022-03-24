@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 12007328}
   - component: {fileID: 12007330}
   - component: {fileID: 12007329}
+  - component: {fileID: 12007331}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -201,6 +202,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12007327}
   m_CullTransparentMesh: 1
+--- !u!95 &12007331
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12007327}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9dbc70afb8da6f4a863cd6a73d953c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &161671442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3906356721122649744, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
@@ -1826,7 +1846,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: field of view
-      value: 45.4
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: far clip plane
@@ -1846,15 +1866,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.76
+      value: -34.197197
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1044059
+      value: 1.3644056
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.4305325
+      value: -2.1705322
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2183,8 +2203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65569b5c10beaa64fbce4369325ed5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
+  nameText: {fileID: 254773459}
+  dialogueText: {fileID: 318584130}
+  animator: {fileID: 0}
 --- !u!4 &1516033421
 Transform:
   m_ObjectHideFlags: 0
