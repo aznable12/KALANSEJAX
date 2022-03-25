@@ -2,11 +2,11 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolState : StateMachineBehaviour
+public class PatrollState : StateMachineBehaviour
 {
     
     float timer;
-    List<Transform> WayPoints = new List<Transform>();
+    List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -14,11 +14,11 @@ public class PatrolState : StateMachineBehaviour
     {
         agent = animator.GetComponent<NavMeshAgent>();
         timer = 0;
-        GameObject go = GameObject.FindGameObjectsWithTag("WayPoints");
+        GameObject go = GameObject.FindGameObjectWithTag("WayPoints");
         foreach (Transform t in go.transform)
-            WayPoints.Add(t);
+            wayPoints.Add(t);
         
-        agent.SetDestination(WayPoints[Random.Range(0, WayPoints.Count)].position);
+        agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
 
     }
 
@@ -26,7 +26,7 @@ public class PatrolState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(agent.remainingDistance <= agent.stoppingDistance)
-            agent.SetDestination(WayPoints[Random.Range(0, WayPoints.Count)].position);
+            agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
 
         timer += Time.deltaTime;
         if (timer > 10)
