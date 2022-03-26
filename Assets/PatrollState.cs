@@ -30,7 +30,7 @@ public class PatrollState : StateMachineBehaviour
 
         timer += Time.deltaTime;
         if (timer > 5)
-            animator.SetBool("isPatrolling", false);
+            animator.SetBool("isPatrolling", true);
 
     }
 
