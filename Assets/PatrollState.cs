@@ -29,7 +29,7 @@ public class PatrollState : StateMachineBehaviour
             agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
 
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (timer > 5)
             animator.SetBool("isPatrolling", false);
 
     }
