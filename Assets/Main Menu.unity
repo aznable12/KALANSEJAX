@@ -427,7 +427,6 @@ GameObject:
   - component: {fileID: 1137403738}
   - component: {fileID: 1137403742}
   - component: {fileID: 1137403741}
-  - component: {fileID: 1137403740}
   - component: {fileID: 1137403739}
   m_Layer: 10
   m_Name: Judul
@@ -464,31 +463,12 @@ Animation:
   m_GameObject: {fileID: 1137403737}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a9538c42c316bfb44a23e58519336998, type: 2}
+  m_Animation: {fileID: 7400000, guid: 0133815626cabb04b85fef0ed4e861b7, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!95 &1137403740
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137403737}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4dcbe74a965e30a479f3e29a61580c15, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1137403741
 MonoBehaviour:
   m_ObjectHideFlags: 0
