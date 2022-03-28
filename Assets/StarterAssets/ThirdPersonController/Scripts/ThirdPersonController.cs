@@ -90,10 +90,6 @@ namespace StarterAssets
 		private const float _threshold = 0.01f;
 
 		private bool _hasAnimator;
-		public GameObject arrowObject;
-		public Transform arrowPoint;
-		public GameObject playerFollowCamera;
-		public GameObject playerAimCamera;
 
 		private void Awake()
 		{
@@ -124,31 +120,6 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			AimShoot();
-
-		}
-		private void AimShoot()
-        {
-			if (_input.isAiming && Grounded && !_input.sprint)
-            {
-				_animator.SetBool("Aiming", _input.isAiming);
-				_animator.SetBool("Shooting", _input.isShooting);
-				playerFollowCamera.SetActive(false);
-				playerAimCamera.SetActive(true);
-            }
-			else
-            {
-				_animator.SetBool("Aiming", false);
-				_animator.SetBool("Shooting", false);
-				playerFollowCamera.SetActive(true);
-				playerAimCamera.SetActive(false);
-			}
-		}
-
-		public void Shoot()
-        {
-			GameObject arrow = Instantiate(arrowObject, arrowPoint.position, transform.rotation);
-			arrow.GetComponent<Rigidbody>().AddForce(transform.forward * 20f, ForceMode.Impulse);
 		}
 
 		private void LateUpdate()
