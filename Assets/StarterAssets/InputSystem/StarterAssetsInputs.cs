@@ -12,8 +12,6 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-		public bool isAiming;
-		public bool isShooting;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -32,7 +30,7 @@ namespace StarterAssets
 
 		public void OnLook(InputValue value)
 		{
-			if (cursorInputForLook)
+			if(cursorInputForLook)
 			{
 				LookInput(value.Get<Vector2>());
 			}
@@ -47,16 +45,6 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-
-		public void OnShoot(InputValue value)
-        {
-			isShooting = value.isPressed;
-        }
-
-		public void OnAiming(InputValue value)
-        {
-			isAiming = value.isPressed;
-        }
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
