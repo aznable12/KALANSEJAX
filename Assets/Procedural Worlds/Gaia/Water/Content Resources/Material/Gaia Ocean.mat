@@ -40,12 +40,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaterDepthRamp:
-        m_Texture: {fileID: 2800000, guid: 963c350b718c6414e96f8c5692f060b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: c728d52391c39a34c93c826e57e1881d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EdgeWaterDist: 5
-    - _FoamDepth: 6
+    - _FoamDepth: 0.87
     - _FoamStrength: 2
     - _FoamTexTile: 256
     - _Metallic: 0.2
@@ -55,7 +55,7 @@ Material:
     - _NormalLayer0Scale: 0.4
     - _NormalLayer1: 0.33
     - _NormalLayer1Scale: 0.6
-    - _NormalLayer2Scale: 0.4
+    - _NormalLayer2Scale: 0.3
     - _NormalMoveScale: 0.0003
     - _NormalTile: 512
     - _PW_DstBlend: 0
@@ -64,15 +64,15 @@ Material:
     - _PW_SSSDistortion: 0.34
     - _PW_SSSPower: 1
     - _PW_SrcBlend: 1
-    - _Smoothness: 0.8
-    - _TransparentDepth: 0.1
+    - _Smoothness: 0.83
+    - _TransparentDepth: 1
     - _TransparentMin: 0
     - _WaveBackwashToggle: 0
     - _WaveDirGlobal: 0
-    - _WaveLength: 128
+    - _WaveLength: 64
     - _WavePeakToggle: 1
     - _WaveShoreClamp: 0.33
-    - _WaveSpeed: 12.5
+    - _WaveSpeed: 7
     - _WaveSteepness: 0.1
     m_Colors:
     - _AmbientColor: {r: 0.41245386, g: 0.49914798, b: 0.6699091, a: 0.6250473}
