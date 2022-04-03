@@ -162,7 +162,6 @@
                 }
 
                 result.skipKey = this.dialogue.config.skipKey;
-                result.secondSkipKey = this.dialogue.config.secondSkipKey;
                 result.revisitChoiceOpacity = this.dialogue.config.revisitChoiceOpacity;
 
                 result.enableTypewriterEffect = this.dialogue.config.enableTypewriterEffect;
@@ -174,7 +173,6 @@
                 if (this.config.dialogueSkin != null) result.dialogueSkin = this.config.dialogueSkin;
 
                 result.skipKey = this.config.skipKey;
-                result.secondSkipKey = this.config.secondSkipKey;
                 result.revisitChoiceOpacity = this.config.revisitChoiceOpacity;
 
                 result.enableTypewriterEffect = this.config.enableTypewriterEffect;
@@ -198,7 +196,7 @@
             yield return new WaitUntil(() => {
                 if (this.dialogue.IsStoppingDialogue()) return true;
 
-                if (Input.GetKeyUp(configData.skipKey) || Input.GetKeyUp(configData.secondSkipKey))
+                if (Input.GetKeyUp(configData.skipKey))
                 {
                     if (configData.enableTypewriterEffect && DialogueUI.IsTypeWriting())
                     {

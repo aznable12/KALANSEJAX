@@ -12,7 +12,6 @@
         {
             SerializedProperty spDialogueUI = property.FindPropertyRelative("dialogueSkin");
             SerializedProperty spSkipKey = property.FindPropertyRelative("skipKey");
-            SerializedProperty spSecondSkipKey = property.FindPropertyRelative("secondSkipKey");
             SerializedProperty spRevisitChoice = property.FindPropertyRelative("revisitChoiceOpacity");
 
             SerializedProperty spTypewritterEffect = property.FindPropertyRelative("enableTypewriterEffect");
@@ -20,7 +19,6 @@
 
             EditorGUI.PropertyField(position, spDialogueUI);
             EditorGUILayout.PropertyField(spSkipKey);
-            EditorGUILayout.PropertyField(spSecondSkipKey);
             EditorGUILayout.PropertyField(spRevisitChoice);
 
             EditorGUILayout.Space();

@@ -19,7 +19,6 @@
         {
             public GameObject dialogueSkin;
             public KeyCode skipKey = KeyCode.Mouse0;
-            public KeyCode secondSkipKey = KeyCode.None;
 
             [Range(0f, 1f)]
             public float revisitChoiceOpacity = 0.75f;
@@ -35,7 +34,6 @@
             {
                 this.dialogueSkin = config.dialogueSkin;
                 this.skipKey = config.skipKey;
-                this.secondSkipKey = config.secondSkipKey;
                 this.revisitChoiceOpacity = config.revisitChoiceOpacity;
                 this.enableTypewriterEffect = config.enableTypewriterEffect;
                 this.charactersPerSecond = config.charactersPerSecond;
