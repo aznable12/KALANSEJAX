@@ -132,7 +132,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0
+    - _SelfShadingSize: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
@@ -155,7 +155,7 @@ Material:
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.44705883, g: 0.28235295, b: 0.28235295, a: 1}
+    - _OutlineColor: {r: 0.3882353, g: 0.18039216, b: 0.18039216, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
@@ -165,7 +165,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":0.018867909908294679,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -200,7 +200,7 @@ Texture2D:
   m_ColorSpace: 1
   m_PlatformBlob: 
   image data: 1024
-  _typelessdata: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  _typelessdata: fffffffffffefefefffdfdfdfffcfcfcfffbfbfbfffafafafff9f9f9fff8f8f8fff7f7f7fff6f6f6fff5f5f5fff4f4f4fff3f3f3fff2f2f2fff1f1f1fff0f0f0ffefefefffeeeeeeffedededffecececffebebebffeaeaeaffe9e9e9ffe8e8e8ffe7e7e7ffe6e6e6ffe5e5e5ffe5e4e4ffe4e3e3ffe3e2e2ffe2e1e1ffe1e0e0ffe0dfdfffdfdedeffdeddddffdddcdcffdcdbdbffdbdadaffdad9d9ffd9d8d8ffd8d7d7ffd7d6d6ffd6d5d5ffd5d4d4ffd4d3d3ffd3d2d2ffd2d1d1ffd1d0d0ffd0cfcfffcfceceffcecdcdffcdccccffcccbcbffcbcacaffcac9c9ffc9c8c8ffc8c7c7ffc7c6c6ffc6c5c5ffc5c4c4ffc4c3c3ffc3c2c2ffc2c1c1ffc1c0c0ffc0bfbfffbfbebeffbebdbdffbdbcbcffbcbbbbffbbbabaffbab9b9ffb9b8b8ffb8b7b7ffb7b6b6ffb6b5b5ffb5b4b4ffb4b3b3ffb3b2b2ffb2b1b1ffb1b0b0ffb1afafffb0aeaeffafadadffaeacacffadababffacaaaaffaba9a9ffaaa8a8ffa9a7a7ffa8a6a6ffa7a5a5ffa6a4a4ffa5a3a3ffa4a2a2ffa3a1a1ffa2a0a0ffa19f9fffa09e9eff9f9d9dff9e9c9cff9d9b9bff9c9a9aff9b9999ff9a9898ff999797ff989696ff979595ff969494ff959393ff949292ff939191ff929090ff918f8fff908e8eff8f8d8dff8e8c8cff8d8b8bff8c8a8aff8b8989ff8a8888ff898787ff888686ff878585ff868484ff858383ff848282ff838181ff828080ff817f7fff807e7eff7f7d7dff7e7c7cff7d7b7bff7d7a7aff7c7979ff7b7878ff7a7777ff797676ff787575ff777474ff767373ff757272ff747171ff737070ff726f6fff716e6eff706d6dff6f6c6cff6e6b6bff6d6a6aff6c6969ff6b6868ff6a6767ff696666ff686565ff676464ff666363ff656262ff646161ff636060ff625f5fff615e5eff605d5dff5f5c5cff5e5b5bff5d5a5aff5c5959ff5b5858ff5a5757ff595656ff585555ff575454ff565353ff555252ff545151ff535050ff524f4fff514e4eff504d4dff4f4c4cff4e4b4bff4d4a4aff4c4949ff4b4848ff4a4747ff494646ff494545ff484444ff474343ff464242ff454141ff444040ff433f3fff423e3eff413d3dff403c3cff3f3b3bff3e3a3aff3d3939ff3c3838ff3b3737ff3a3636ff393535ff383434ff373333ff363232ff353131ff343030ff332f2fff322e2eff312d2dff302c2cff2f2b2bff2e2a2aff2d2929ff2c2828ff2b2727ff2a2626ff292525ff282424ff272323ff262222ff252121ff242020ff231f1fff221e1eff211d1dff201c1cff1f1b1bff1e1a1aff1d1919ff1c1818ff1b1717ff1a1616ff191515ff181414ff171313ff161212ff151111ff151010ff140f0fff130e0eff120d0dff110c0cff100b0bff0f0a0aff0e0909ff0d0808ff0c0707ff0b0606ff0a0505ff090404ff080303ff070202ff060101ff050000
   m_StreamData:
     serializedVersion: 2
     offset: 0
