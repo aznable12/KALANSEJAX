@@ -2569,18 +2569,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 253284654}
-  character: {fileID: 0}
   defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
+    serializedVersion: 2
     m_Bits: 4294967291
   footElevate: 0
   useHandIK: 1
@@ -2605,7 +2597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: 43dbd703-4890-45b7-b7bb-703b313d3a00
-  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -2660,14 +2651,10 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
     character: {fileID: 467487462}
     animatorConstraint: 0
     characterController: {fileID: 467487460}
     navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
     useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
@@ -2679,26 +2666,19 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 1, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0, interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0, startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 1
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
   inputType: 1
   mouseButtonMove: 0
   mouseLayerMask:
+    serializedVersion: 2
     m_Bits: 4294967295
   invertAxis: 0
   jumpKey: 32
-  uiConstrained: 0
-  cacheCamera: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   directionVelocity: {x: 0, y: 0, z: 0}
   useAcceleration: 1
   acceleration: 4
   deceleration: 2
-  forceDisplayTouchstick: 0
 --- !u!4 &467487463
 Transform:
   m_ObjectHideFlags: 0
@@ -3111,18 +3091,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1989456671}
-  character: {fileID: 0}
   defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
+    serializedVersion: 2
     m_Bits: 4294967291
   footElevate: 0
   useHandIK: 1
@@ -3147,7 +3119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -3202,14 +3173,10 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
     useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
@@ -3221,12 +3188,7 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0, interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0, startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &565213913
 Transform:
   m_ObjectHideFlags: 0
@@ -3235,7 +3197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565213909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.23, y: 0.26, z: 23.89}
+  m_LocalPosition: {x: 38.23, y: 0.26, z: 24.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989456672}
@@ -3257,7 +3219,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &565213915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,7 +3231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
+  currentID: 0
+  instanceID: 0
+  actionsList: {fileID: 565213914}
+  runInBackground: 1
+  destroyAfterFinishing: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &565213916
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3284,9 +3252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 0}
-  isExitingApplication: 0
   clickType: 0
-  lastClickTime: -100
 --- !u!1 &567852527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,17 +3501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ac027e764cd4be5aaebfa04aeddd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraMotor: {fileID: 0}
   setCameraProperties: 0
   projection: 1
   cameraSize: 5
   fieldOfView: 60
-  pivot: {fileID: 0}
-  motorEnabled: 0
-  targetRotationX: 0
-  targetRotationY: 0
-  targetRotationZ: 0
-  _velocityPosition: {x: 0, y: 0, z: 0}
   target:
     target: 0
     gameObject: {fileID: 0}
@@ -3565,14 +3524,12 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   targetOffset: {x: 0, y: 1, z: 0}
   pivotOffset: {x: 0, y: 0, z: 0}
   initialDirection: 0
   allowOrbitInput: 1
   orbitInput: 0
   orbitSpeed: 25
-  orbitInputTime: -1000
   maxPitch: 120
   sensitivity:
     optionIndex: 0
@@ -3595,20 +3552,14 @@ MonoBehaviour:
   initialZoom: 3
   zoomSensitivity: 5
   zoomLimits: {x: 1, y: 10}
-  wallConstrainZoom: 0
-  desiredZoom: 0
-  currentZoom: 0
-  targetZoom: 0
   avoidWallClip: 1
   wallClipRadius: 0.4
   wallClipLayerMask:
+    serializedVersion: 2
     m_Bits: 4294967291
   autoRepositionBehind: 1
   autoRepositionTimeout: 1.5
   autoRepositionSpeed: 2.5
-  recoverSpeedX: 0
-  recoverSpeedY: 0
-  cursorLock: 0
 --- !u!114 &638971242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4099,7 +4050,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &717813195
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4113,7 +4063,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: 32ba5441-205b-4d9e-a0fd-ed79ad2cfe84
-  exitingApplication: 0
   dialogue: {fileID: 717813196}
   parent: {fileID: 0}
   children: []
@@ -4145,14 +4094,18 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   afterRun: 0
   jumpTo: {fileID: 0}
   executeBehavior: 0
   actionsList: {fileID: 717813194}
   conditionsList: {fileID: 717813193}
   overrideDefaultConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &717813196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4166,16 +4119,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: 463986c5-47e9-4c19-93b3-b1682b713e6a
-  exitingApplication: 0
   dialogue: {fileID: 717813195}
   itemInstances:
   - {fileID: 717813195}
   information:
     revisits:
       keys: []
-      values: []
+      values: 
   overrideConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
   dialogueTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
@@ -4186,6 +4143,7 @@ MonoBehaviour:
       m_Name: 
       m_OriginalName: 
       m_EditFieldRect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 0
@@ -4196,10 +4154,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
-      k_RenameOverlayFocusName: RenameOverlayField
-      m_TextFieldControlID: 0
     m_SearchString: 
-  stopDialogue: 0
 --- !u!1 &729279749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,10 +4351,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7391b8fec7a604d529a9abbf7d2b4d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorData: {hotspot: {fileID: 0}, instance: {fileID: 0}, enabled: 0, mouseOverCursor: {fileID: 0}, cursorPosition: {x: 0, y: 0}}
-  proximityData: {hotspot: {fileID: 0}, instance: {fileID: 0}, enabled: 0, prefab: {fileID: 0}, offset: {x: 0, y: 0, z: 0}, prefabInstance: {fileID: 0}, radius: 1, targetPlayer: 1, target: {fileID: 0}}
-  headTrackData: {hotspot: {fileID: 0}, instance: {fileID: 0}, enabled: 0, characters: []
-, radius: 5}
+  cursorData:
+    hotspot: {fileID: 0}
+    instance: {fileID: 0}
+    enabled: 0
+    mouseOverCursor: {fileID: 0}
+    cursorPosition: {x: 0, y: 0}
+  proximityData:
+    hotspot: {fileID: 0}
+    instance: {fileID: 0}
+    enabled: 0
+    prefab: {fileID: 0}
+    offset: {x: 0, y: 0, z: 0}
+    radius: 1
+    targetPlayer: 1
+    target: {fileID: 0}
+  headTrackData:
+    hotspot: {fileID: 0}
+    instance: {fileID: 0}
+    enabled: 0
+    characters: []
+    radius: 5
   trigger: {fileID: 0}
 --- !u!135 &737864369
 SphereCollider:
@@ -5002,7 +4974,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &818333930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5015,7 +4986,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
+  currentID: 0
+  instanceID: 0
+  actionsList: {fileID: 818333929}
+  runInBackground: 1
+  destroyAfterFinishing: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &818562570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7556,13 +7534,9 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
-    cacheInstanceID: 0
-    cacheCharacterID: 0
-    cacheCharacter: {fileID: 0}
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   state: {fileID: 11400000, guid: 564e82da5feba41b5aa10d854a0aabda, type: 2}
 --- !u!114 &1248587800
 MonoBehaviour:
@@ -7580,7 +7554,6 @@ MonoBehaviour:
   - {fileID: 1248587799}
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1248587801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7593,7 +7566,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
+  currentID: 0
+  instanceID: 0
+  actionsList: {fileID: 1248587800}
+  runInBackground: 1
+  destroyAfterFinishing: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1252270977
 GameObject:
   m_ObjectHideFlags: 0
@@ -9157,7 +9137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isExpanded: 1
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1786989535}
   waitToComplete: 1
 --- !u!114 &1649885726
 MonoBehaviour:
@@ -9172,10 +9152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 0}
+  - {fileID: 1649885725}
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1649885727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9188,7 +9167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
+  currentID: 0
+  instanceID: 0
+  actionsList: {fileID: 1649885726}
+  runInBackground: 1
+  destroyAfterFinishing: 1
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1649885728
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -9202,9 +9188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1649885729}
-  isExitingApplication: 0
   keyCode: 101
-  playerInside: 0
 --- !u!114 &1649885729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9225,7 +9209,6 @@ MonoBehaviour:
   - option: 1
     conditions: {fileID: 0}
     actions: {fileID: 1649885727}
-  disableFrame: -1
   minDistance: 0
   minDistanceToPlayer: 5
 --- !u!135 &1649885730
@@ -9269,7 +9252,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1649885733
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9283,7 +9265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c116863e-a233-4ee5-81d6-2089db32f63c
-  exitingApplication: 0
   dialogue: {fileID: 0}
   parent: {fileID: 0}
   children: []
@@ -9315,14 +9296,18 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   afterRun: 0
   jumpTo: {fileID: 0}
   executeBehavior: 0
   actionsList: {fileID: 1649885732}
   conditionsList: {fileID: 1649885731}
   overrideDefaultConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &1649885734
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -9351,7 +9336,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1649885736
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9365,7 +9349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: 73ddfa5c-c232-4ff8-99ab-6964cec52487
-  exitingApplication: 0
   dialogue: {fileID: 0}
   parent: {fileID: 0}
   children: []
@@ -9397,14 +9380,18 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   afterRun: 0
   jumpTo: {fileID: 0}
   executeBehavior: 0
   actionsList: {fileID: 1649885735}
   conditionsList: {fileID: 1649885734}
   overrideDefaultConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!1 &1653211380
 GameObject:
   m_ObjectHideFlags: 0
@@ -9547,7 +9534,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1674788931}
-  isExitingApplication: 0
 --- !u!114 &1674788931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9571,7 +9557,6 @@ MonoBehaviour:
   - option: 1
     conditions: {fileID: 0}
     actions: {fileID: 818333930}
-  disableFrame: -1
   minDistance: 0
   minDistanceToPlayer: 5
 --- !u!114 &1674788932
@@ -9587,7 +9572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 0}
-  isExitingApplication: 0
 --- !u!114 &1674788933
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -9601,7 +9585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 0}
-  isExitingApplication: 0
 --- !u!1 &1677421245
 GameObject:
   m_ObjectHideFlags: 0
@@ -9907,15 +9890,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCameraMotor: {fileID: 638971242}
-  transitionTime: 0
-  transitionDuration: 0
-  transitionInitPosition: {x: 0, y: 0, z: 0}
-  transitionInitDirection: {x: 0, y: 0, z: 0}
   cameraSmoothTime:
     positionDuration: 0.1
     rotationDuration: 0.1
-    positionVelocity: {x: 0, y: 0, z: 0}
-    rotationVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &1760403311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10032,10 +10009,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1786989536}
+  - component: {fileID: 1786989535}
+  - component: {fileID: 1786989534}
   - component: {fileID: 1786989533}
   - component: {fileID: 1786989532}
+  - component: {fileID: 1786989531}
   - component: {fileID: 1786989530}
   - component: {fileID: 1786989529}
+  - component: {fileID: 1786989528}
   - component: {fileID: 1786989527}
   - component: {fileID: 1786989526}
   - component: {fileID: 1786989525}
@@ -10051,19 +10032,18 @@ GameObject:
   - component: {fileID: 1786989515}
   - component: {fileID: 1786989514}
   - component: {fileID: 1786989513}
+  - component: {fileID: 1786989512}
   - component: {fileID: 1786989511}
   - component: {fileID: 1786989510}
+  - component: {fileID: 1786989509}
   - component: {fileID: 1786989508}
   - component: {fileID: 1786989507}
+  - component: {fileID: 1786989506}
   - component: {fileID: 1786989505}
   - component: {fileID: 1786989504}
+  - component: {fileID: 1786989503}
   - component: {fileID: 1786989502}
   - component: {fileID: 1786989501}
-  - component: {fileID: 1786989542}
-  - component: {fileID: 1786989541}
-  - component: {fileID: 1786989540}
-  - component: {fileID: 1786989538}
-  - component: {fileID: 1786989537}
   m_Layer: 0
   m_Name: MsMirnaDialogue
   m_TagString: Untagged
@@ -10099,7 +10079,64 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989503
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497f4f1f8f00b4f7497d7fe3f9977ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 33e5f7c2-f9b7-4126-a5c4-c3b7a6b2b934
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989509}
+  children: []
+  content:
+    content: Na`ah, Miss Mirna, gotta do something first
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 0}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 1
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989502}
+  conditionsList: {fileID: 1786989501}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
+  showOnce: 0
+  onFailChoice: 0
 --- !u!114 &1786989504
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10128,7 +10165,64 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989506
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497f4f1f8f00b4f7497d7fe3f9977ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 1da4f5e2-e71d-4902-b918-5332b576cd0b
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989509}
+  children: []
+  content:
+    content: Of course Miss Mirna
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 0}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989505}
+  conditionsList: {fileID: 1786989504}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
+  showOnce: 0
+  onFailChoice: 0
 --- !u!114 &1786989507
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10157,7 +10251,83 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989509
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb29125239d2144eba65f9df0fae2ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 4f717903-d647-4929-9a0b-5e0f09e70462
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989534}
+  children:
+  - {fileID: 1786989506}
+  - {fileID: 1786989503}
+  content:
+    content: Well, Miss...
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 11400000, guid: 58f1436c30248d84fb94f131de70ca37, type: 2}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989508}
+  conditionsList: {fileID: 1786989507}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
+  shuffleChoices: 0
+  timedChoice: 0
+  timeout:
+    optionIndex: 0
+    value: 5
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  timeoutBehavior: 0
 --- !u!114 &1786989510
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10186,7 +10356,63 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989512
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d8962a5d63647f8a07e353f6d1c5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 4576834f-4829-4d5c-b8aa-a86fead5ef78
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989534}
+  children: []
+  content:
+    content: "Hey Ruli. Be a good boy and help me buy some coffee at the canteen
+      will you?\u201D"
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 11400000, guid: 90237f19a2212b540b4d5133b8e2654a, type: 2}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989511}
+  conditionsList: {fileID: 1786989510}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &1786989513
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10333,13 +10559,9 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
-    cacheInstanceID: 0
-    cacheCharacterID: 0
-    cacheCharacter: {fileID: 0}
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   clip: {fileID: 0}
   avatarMask: {fileID: 0}
   speed:
@@ -10361,8 +10583,6 @@ MonoBehaviour:
   fadeIn: 0.1
   fadeOut: 0.1
   waitTillComplete: 0
-  characterAnimator: {fileID: 0}
-  forceStop: 0
 --- !u!114 &1786989523
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10405,13 +10625,9 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
-    cacheInstanceID: 0
-    cacheCharacterID: 0
-    cacheCharacter: {fileID: 0}
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   clip: {fileID: 74431943307473370, guid: ddbb0c2ffa47e48f295597feb916b6f9, type: 2}
   avatarMask: {fileID: 0}
   speed:
@@ -10433,8 +10649,6 @@ MonoBehaviour:
   fadeIn: 0.1
   fadeOut: 0.1
   waitTillComplete: 0
-  characterAnimator: {fileID: 0}
-  forceStop: 0
 --- !u!114 &1786989525
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10464,13 +10678,9 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
-    cacheInstanceID: 0
-    cacheCharacterID: 0
-    cacheCharacter: {fileID: 0}
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   clip: {fileID: 74926674734837956, guid: ddbb0c2ffa47e48f295597feb916b6f9, type: 2}
   avatarMask: {fileID: 0}
   speed:
@@ -10492,8 +10702,6 @@ MonoBehaviour:
   fadeIn: 0.1
   fadeOut: 0.1
   waitTillComplete: 0
-  characterAnimator: {fileID: 0}
-  forceStop: 0
 --- !u!114 &1786989526
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10523,7 +10731,62 @@ MonoBehaviour:
   - {fileID: 1786989524}
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989528
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d8962a5d63647f8a07e353f6d1c5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 91eaea6c-7af7-4ab8-aca5-89178f033a88
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989534}
+  children: []
+  content:
+    content: Yes, Ms. Mirna it`s my bad
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 8300000, guid: 2773c236a08fd8c4d804a3845491671c, type: 3}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 11400000, guid: 58f1436c30248d84fb94f131de70ca37, type: 2}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989527}
+  conditionsList: {fileID: 1786989526}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &1786989529
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10553,7 +10816,62 @@ MonoBehaviour:
   - {fileID: 1786989525}
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989531
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d8962a5d63647f8a07e353f6d1c5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 4336f70d-5680-43b3-82c3-45fd035143d4
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 1786989534}
+  children: []
+  content:
+    content: Hey, Ruli, please don`t running around like that
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 11400000, guid: 90237f19a2212b540b4d5133b8e2654a, type: 2}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989530}
+  conditionsList: {fileID: 1786989529}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &1786989532
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10582,7 +10900,121 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
+--- !u!114 &1786989534
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39eeb6e5952bf4233a080003f8cbf200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 4f3616b3-3c4e-40c6-8deb-a0017c99a013
+  dialogue: {fileID: 1786989535}
+  parent: {fileID: 0}
+  children:
+  - {fileID: 1786989531}
+  - {fileID: 1786989528}
+  - {fileID: 1786989512}
+  - {fileID: 1786989509}
+  content:
+    content: 
+    postProcess: 0
+    translationID: 0
+  voice: {fileID: 0}
+  autoPlay: 0
+  autoPlayTime: 3
+  actor: {fileID: 0}
+  actorSpriteIndex: 0
+  actorTransform:
+    target: 3
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  afterRun: 0
+  jumpTo: {fileID: 0}
+  executeBehavior: 0
+  actionsList: {fileID: 1786989533}
+  conditionsList: {fileID: 1786989532}
+  overrideDefaultConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
+--- !u!114 &1786989535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786989500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1662a4a7f49c47ccb5cf802b1d27d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gid: 206757c3-d947-41ff-bf4c-553f3c800af6
+  dialogue: {fileID: 1786989534}
+  itemInstances:
+  - {fileID: 1786989534}
+  - {fileID: 1786989531}
+  - {fileID: 1786989528}
+  - {fileID: 1786989512}
+  - {fileID: 1786989509}
+  - {fileID: 1786989506}
+  - {fileID: 1786989503}
+  information:
+    revisits:
+      keys: []
+      values: 
+  overrideConfig: 0
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
+  dialogueTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f0f9fdff
+    m_LastClickedID: -132624
+    m_ExpandedIDs: e89afdff84a5fdff04a7fdff00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
 --- !u!4 &1786989536
 Transform:
   m_ObjectHideFlags: 0
@@ -10597,77 +11029,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1786989537
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786989500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions: []
---- !u!114 &1786989538
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786989500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
---- !u!114 &1786989540
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786989500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions: []
---- !u!114 &1786989541
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786989500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions: []
---- !u!114 &1786989542
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786989500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &1791069139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11641,7 +12002,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &2049970764
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11655,7 +12015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: f2eead8e-b1ad-4e60-afd1-0f8ab572fa97
-  exitingApplication: 0
   dialogue: {fileID: 2049970768}
   parent: {fileID: 2049970767}
   children: []
@@ -11687,14 +12046,18 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   afterRun: 0
   jumpTo: {fileID: 0}
   executeBehavior: 0
   actionsList: {fileID: 2049970763}
   conditionsList: {fileID: 2049970762}
   overrideDefaultConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &2049970765
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -11723,7 +12086,6 @@ MonoBehaviour:
   actions: []
   executingIndex: -1
   isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &2049970767
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11737,7 +12099,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: 7c031675-8cae-41c3-8c11-587abb781de3
-  exitingApplication: 0
   dialogue: {fileID: 2049970768}
   parent: {fileID: 0}
   children:
@@ -11770,14 +12131,18 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_CallsDirty: 1
   afterRun: 0
   jumpTo: {fileID: 0}
   executeBehavior: 0
   actionsList: {fileID: 2049970766}
   conditionsList: {fileID: 2049970765}
   overrideDefaultConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
 --- !u!114 &2049970768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11791,7 +12156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: ea1f16b3-4779-491a-a6b1-f276681846d2
-  exitingApplication: 0
   dialogue: {fileID: 2049970767}
   itemInstances:
   - {fileID: 2049970767}
@@ -11799,9 +12163,14 @@ MonoBehaviour:
   information:
     revisits:
       keys: []
-      values: []
+      values: 
   overrideConfig: 0
-  config: {dialogueSkin: {fileID: 0}, skipKey: 323, secondSkipKey: 0, revisitChoiceOpacity: 0.75, enableTypewriterEffect: 1, charactersPerSecond: 30}
+  config:
+    dialogueSkin: {fileID: 0}
+    skipKey: 323
+    revisitChoiceOpacity: 0.75
+    enableTypewriterEffect: 1
+    charactersPerSecond: 30
   dialogueTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f0f0ffff
@@ -11812,6 +12181,7 @@ MonoBehaviour:
       m_Name: 
       m_OriginalName: 
       m_EditFieldRect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 0
@@ -11822,10 +12192,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
-      k_RenameOverlayFocusName: RenameOverlayField
-      m_TextFieldControlID: 0
     m_SearchString: 
-  stopDialogue: 0
 --- !u!1 &2057738485
 GameObject:
   m_ObjectHideFlags: 0
