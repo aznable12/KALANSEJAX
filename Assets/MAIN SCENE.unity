@@ -23123,6 +23123,8 @@ GameObject:
   - component: {fileID: 918995630}
   - component: {fileID: 918995633}
   - component: {fileID: 918995638}
+  - component: {fileID: 918995667}
+  - component: {fileID: 918995666}
   m_Layer: 0
   m_Name: 'Quest 1 '
   m_TagString: Untagged
@@ -23372,8 +23374,8 @@ MonoBehaviour:
     charactersPerSecond: 30
   dialogueTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 988d0000
-    m_LastClickedID: 36248
+    m_SelectedIDs: e08d0000
+    m_LastClickedID: 36320
     m_ExpandedIDs: 38e0feff20e5fefff6e5feff000000009e650000aa650000b0650000928d00009e8d0000a48d0000b08d0000b68d0000fe8f00000a90000010900000c6eb0200d2eb0200d8eb02002e4203003a42030040420300
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -24472,6 +24474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 918995690}
+  - {fileID: 918995666}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &918995665
@@ -24532,6 +24535,112 @@ MonoBehaviour:
     revisitChoiceOpacity: 0.75
     enableTypewriterEffect: 1
     charactersPerSecond: 30
+--- !u!114 &918995666
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918995619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7488e222b11cb4789a359d6a20b1e33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  character:
+    target: 0
+    character: {fileID: 0}
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  clip: {fileID: -203655887218126122, guid: c4c96599b013f084da8d40ed5a4871eb, type: 3}
+  avatarMask: {fileID: 31900000, guid: 91110ffac4adb4eb0bb1d03ccbdc778b, type: 2}
+  speed:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  fadeIn: 0.1
+  fadeOut: 0.1
+  waitTillComplete: 0
+--- !u!114 &918995667
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918995619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7488e222b11cb4789a359d6a20b1e33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  character:
+    target: 2
+    character: {fileID: 565213912}
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  clip: {fileID: -203655887218126122, guid: 31ffd77098dbcb64ca5258b49f6ea9ab, type: 3}
+  avatarMask: {fileID: 31900000, guid: 91110ffac4adb4eb0bb1d03ccbdc778b, type: 2}
+  speed:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  fadeIn: 0.1
+  fadeOut: 0.1
+  waitTillComplete: 0
 --- !u!114 &918995668
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -24559,6 +24668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 918995691}
+  - {fileID: 918995667}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &918995670
