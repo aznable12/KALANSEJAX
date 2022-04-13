@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4426963543133440565}
   - component: {fileID: 844300923032067958}
   - component: {fileID: 1741845417183110527}
+  - component: {fileID: -5404594881022382780}
+  - component: {fileID: 2537641888145984564}
   m_Layer: 0
   m_Name: f8384a4cc3e345158f10ffe85875e91a
   m_TagString: Untagged
@@ -48,7 +50,7 @@ MonoBehaviour:
   instanceID: 0
   actionsList: {fileID: 1741845417183110527}
   runInBackground: 1
-  destroyAfterFinishing: 0
+  destroyAfterFinishing: 1
   onFinish:
     m_PersistentCalls:
       m_Calls: []
@@ -64,6 +66,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: -5404594881022382780}
+  - {fileID: 2537641888145984564}
   executingIndex: -1
   isExecuting: 0
+--- !u!114 &-5404594881022382780
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558255698403531230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac72c43a3476c4b1ab030fe1d0434810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  duration: 1
+  roughness: 3
+  magnitude: 0.1
+  shakePosition: 1
+  shakeRotation: 1
+  setOrigin: 0
+  origin:
+    target: 1
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  radius: 10
+--- !u!114 &2537641888145984564
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558255698403531230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f6fcda176114231b71e606c347f970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  target:
+    target: 2
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
