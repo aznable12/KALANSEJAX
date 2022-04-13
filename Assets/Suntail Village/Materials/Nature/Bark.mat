@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bark
-  m_Shader: {fileID: 4800000, guid: b50955928b87e714ab31f7fe9003b849, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _BLENDNORMALS_ON _COVERAGEOVERLAYMETHOD_VERTEX_POSITION _COVERAGEOVERLAYTYPE_VERTEX_POSITION
     _SMOOTHNESSSOURCE_METALLIC_ALPHA
   m_LightmapFlags: 4
@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 0.7, y: 0.7}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 494dfb2d0f4820c46b328d902e7c3e18, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 0.7, y: 0.7}
         m_Offset: {x: 0, y: 0}
     - _MetalicSmoothness:
@@ -99,6 +99,10 @@ Material:
     - _SurfaceNormal:
         m_Texture: {fileID: 2800000, guid: 4d3696225e0ca5041b7e477bb0b1c9de, type: 3}
         m_Scale: {x: 1, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _TerrainHolesTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 0}
@@ -155,5 +159,6 @@ Material:
     m_Colors:
     - _Color: {r: 0.71800005, g: 0.5075517, b: 0.46628737, a: 1}
     - _CoverageColor: {r: 0.182825, g: 0.515, b: 0.27075368, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SurfaceColor: {r: 0.7647059, g: 0.5882353, b: 0.52156866, a: 0}
+  m_BuildTextureStacks: []
