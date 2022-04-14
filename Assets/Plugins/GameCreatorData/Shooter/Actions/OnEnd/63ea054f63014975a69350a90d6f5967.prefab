@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8967906428511183113}
   - component: {fileID: 8263726385376221802}
   - component: {fileID: 1607630375724222758}
+  - component: {fileID: 8103591655972171415}
+  - component: {fileID: -4064047261282613830}
   m_Layer: 0
   m_Name: 63ea054f63014975a69350a90d6f5967
   m_TagString: Untagged
@@ -64,6 +66,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 8103591655972171415}
+  - {fileID: -4064047261282613830}
   executingIndex: -1
   isExecuting: 0
+--- !u!114 &8103591655972171415
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155517022090617179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3594c19efd77940c7b2a014b386a0922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  audioClip: {fileID: 8300000, guid: 130f1b88264d3446a82ec430f8ce0d1d, type: 3}
+  fadeOut: 0
+--- !u!114 &-4064047261282613830
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155517022090617179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d7be1b910bc48cda9cb586c1cdce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  character:
+    target: 1
+    character: {fileID: 0}
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  action: 1
+  layer: 2
+  avatarMask: {fileID: 31900000, guid: aafe279359cb341a3b058eafb4824481, type: 2}
+  state: 1
+  stateAsset: {fileID: 0}
+  stateClip: {fileID: 7400000, guid: 194898fb023c441668041508492a8c64, type: 2}
+  weight: 1
+  transitionTime: 0.1
+  speed:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
