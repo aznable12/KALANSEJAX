@@ -9,6 +9,18 @@
 
     public class BladeComponent : MonoBehaviour
 	{
+        public enum WeaponBone
+        {
+            Root = -1,
+            RightHand = HumanBodyBones.RightHand,
+            LeftHand = HumanBodyBones.LeftHand,
+            RightArm = HumanBodyBones.RightLowerArm,
+            LeftArm = HumanBodyBones.LeftLowerArm,
+            RightFoot = HumanBodyBones.RightFoot,
+            LeftFoot = HumanBodyBones.LeftFoot,
+            Camera = 100,
+        }
+        
         public enum CaptureHitModes
         {
             Segment,
@@ -18,13 +30,11 @@
 
         private struct BoxData
         {
-            public bool active;
             public Vector3 center;
             public Quaternion rotation;
 
-            public BoxData(Vector3 center, Quaternion rotation, bool active)
+            public BoxData(Vector3 center, Quaternion rotation)
             {
-                this.active = active;
                 this.center = center;
                 this.rotation = rotation;
             }
@@ -40,6 +50,8 @@
         private static readonly GameObject[] EMPTY_GO_LIST = new GameObject[0];
 
         // PROPERTIES: ----------------------------------------------------------------------------
+
+        public WeaponBone bone = WeaponBone.RightHand;
 
         public CharacterMelee Melee { get; private set; }
 
@@ -168,9 +180,9 @@
             #if UNITY_EDITOR
             this.capturingHitsTime = Time.time;
             #endif
-
             GameObject[] candidates = EMPTY_GO_LIST;
-
+            if (!this.isActiveAndEnabled)
+                return candidates;
             switch (this.captureHits)
             {
                 case CaptureHitModes.Segment: candidates = CaptureHitsSegment(); break;
@@ -250,64 +262,24 @@
 
         private GameObject[] CaptureHitsBox()
         {
-            int predictions = 1;
-            BoxData currentBoxData = new BoxData(
-                this.transform.TransformPoint(this.boxCenter), 
+            int numCollisions = Physics.OverlapBoxNonAlloc(
+                transform.TransformPoint(this.offset),
+                this.boxSize,
+                this.bufferColliders,
                 this.transform.rotation,
-                true
+                this.layerMask,
+                QueryTriggerInteraction.Ignore
             );
 
-            this.boxInterframeCaptures[0] = currentBoxData; 
-            bool hasPreviousCapture = Time.frameCount <= this.prevCaptureFrame + 1;
-            
-            if (hasPreviousCapture)
+            GameObject[] collisions = new GameObject[numCollisions];
+            for (int i = 0; i < numCollisions; ++i)
             {
-                predictions = this.boxInterframePredictions;
-                for (int i = 0; i < predictions; ++i)
-                {
-                    float t = ((float) (i + 1f)) / ((float) predictions);
-                    this.boxInterframeCaptures[i] = new BoxData(
-                        Vector3.Lerp(currentBoxData.center, this.prevBoxBounds.center, t),
-                        Quaternion.Lerp(currentBoxData.rotation, this.prevBoxBounds.rotation, t),
-                        true
-                    );
-                }
-            }
-            else
-            {
-                int boxDataLength = this.boxInterframeCaptures.Length;
-                for (int i = 0; i < boxDataLength; i++)
-                {
-                    this.boxInterframeCaptures[i].active = false;
-                }
+                collisions[i] = this.bufferColliders[i].gameObject;
             }
 
-            this.prevBoxBounds = currentBoxData;
-            List<GameObject> candidates = new List<GameObject>();
-            
-            for (int i = 0; i < boxInterframeCaptures.Length; ++i)
-            {
-                if (!this.boxInterframeCaptures[i].active) continue;
-                
-                int numCollisions = Physics.OverlapBoxNonAlloc(
-                    this.boxInterframeCaptures[i].center,
-                    this.boxSize / 2f,
-                    this.bufferColliders,
-                    this.boxInterframeCaptures[i].rotation,
-                    this.layerMask,
-                    QueryTriggerInteraction.Ignore
-                );
-
-                for (int j = 0; j < numCollisions; ++j)
-                {
-                    GameObject target = this.bufferColliders[j].gameObject;
-                    if (!candidates.Contains(target)) candidates.Add(target);
-                }
-            }
-
-            return candidates.ToArray();
+            return collisions;
         }
-        
+
         public Vector3 GetImpactPosition()
         {
             Vector3 posA = transform.TransformPoint(this.pointA);
@@ -372,7 +344,6 @@
                         for (int i = 0; i < this.boxInterframeCaptures.Length; ++i)
                         {
                             if (Time.frameCount > this.prevCaptureFrame + 1) continue;
-                            if (!this.boxInterframeCaptures[i].active) continue;
                             if (this.boxInterframeCaptures[i].rotation == default) continue;
                             if (this.boxInterframeCaptures[i].center == default) continue;
                             

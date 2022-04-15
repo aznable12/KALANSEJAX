@@ -34,10 +34,7 @@
         private SerializedProperty spCharacterState;
         private SerializedProperty spAvatarMask;
 
-        private SerializedProperty spPrefab;
-        private SerializedProperty spAttachment;
-        private SerializedProperty spPosition;
-        private SerializedProperty spRotation;
+        private SerializedProperty spPrefabs;
 
         private SerializedProperty spAudioSheathe;
         private SerializedProperty spAudioDraw;
@@ -47,25 +44,49 @@
         private SerializedProperty spPrefabImpactNormal;
         private SerializedProperty spPrefabImpactKnockback;
 
-        private SerializedProperty spGroundHitReactionFront;
-        private SerializedProperty spGroundHitReactionBehind;
-        private SerializedProperty spAirborneHitReactionFront;
-        private SerializedProperty spAirborneHitReactionBehind;
-        private SerializedProperty spKnockbackReactions;
+        private SerializedProperty spGroundHitReactionsFrontUpper;
+        private SerializedProperty spGroundHitReactionsFrontMiddle;
+        private SerializedProperty spGroundHitReactionsFrontLower;
+
+        private SerializedProperty spGroundHitReactionsBackUpper;
+        private SerializedProperty spGroundHitReactionsBackMiddle;
+        private SerializedProperty spGroundHitReactionsBackLower;
+
+        private SerializedProperty spAirborneHitReactionsFrontUpper;
+        private SerializedProperty spAirborneHitReactionsFrontMiddle;
+        private SerializedProperty spAirborneHitReactionsFrontLower;
+
+        private SerializedProperty spAirborneHitReactionsBackUpper;
+        private SerializedProperty spAirborneHitReactionsBackMiddle;
+        private SerializedProperty spAirborneHitReactionsBackLower;
+
+        private SerializedProperty spKnockbackReaction;
 
         private SerializedProperty spCombos;
 
-        private ReorderableList groundHitReactionsFrontList;
-        private ReorderableList groundHitReactionsBehindList;
-        private ReorderableList airborneHitReactionsFrontList;
-        private ReorderableList airborneHitReactionsBehindList;
-        private ReorderableList knockbackReactionsList;
+        private ReorderableList groundHitReactionsFrontUpper;
+        private ReorderableList groundHitReactionsFrontMiddle;
+        private ReorderableList groundHitReactionsFrontLower;
+
+        private ReorderableList groundHitReactionsBackUpper;
+        private ReorderableList groundHitReactionsBackMiddle;
+        private ReorderableList groundHitReactionsBackLower;
+
+        private ReorderableList airborneHitReactionsFrontUpper;
+        private ReorderableList airborneHitReactionsFrontMiddle;
+        private ReorderableList airborneHitReactionsFrontLower;
+
+        private ReorderableList airborneHitReactionsBackUpper;
+        private ReorderableList airborneHitReactionsBackMiddle;
+        private ReorderableList airborneHitReactionsBackLower;
+
+        private ReorderableList knockbackReaction;
 
         private ReorderableList comboList;
 
         // PROPERTIES: ----------------------------------------------------------------------------
 
-        
+
 
         // INITIALIZER: ---------------------------------------------------------------------------
 
@@ -84,10 +105,7 @@
             this.spCharacterState = this.serializedObject.FindProperty("characterState");
             this.spAvatarMask = this.serializedObject.FindProperty("characterMask");
 
-            this.spPrefab = this.serializedObject.FindProperty("prefab");
-            this.spAttachment = this.serializedObject.FindProperty("attachment");
-            this.spPosition = this.serializedObject.FindProperty("positionOffset");
-            this.spRotation = this.serializedObject.FindProperty("rotationOffset");
+            this.spPrefabs = this.serializedObject.FindProperty("prefabs");
 
             this.spAudioSheathe = this.serializedObject.FindProperty("audioSheathe");
             this.spAudioDraw = this.serializedObject.FindProperty("audioDraw");
@@ -97,53 +115,140 @@
             this.spPrefabImpactNormal = this.serializedObject.FindProperty("prefabImpactNormal");
             this.spPrefabImpactKnockback = this.serializedObject.FindProperty("prefabImpactKnockback");
 
-            this.spGroundHitReactionFront = this.serializedObject.FindProperty("groundHitReactionsFront");
-            this.spGroundHitReactionBehind = this.serializedObject.FindProperty("groundHitReactionsBehind");
-            this.spAirborneHitReactionFront = this.serializedObject.FindProperty("airborneHitReactionsFront");
-            this.spAirborneHitReactionBehind = this.serializedObject.FindProperty("airborneHitReactionsBehind");
-            this.spKnockbackReactions = this.serializedObject.FindProperty("knockbackReaction");
+            spGroundHitReactionsFrontUpper    = this.serializedObject.FindProperty("groundHitReactionsFrontUpper");
+            spGroundHitReactionsFrontMiddle   = this.serializedObject.FindProperty("groundHitReactionsFrontMiddle");
+            spGroundHitReactionsFrontLower    = this.serializedObject.FindProperty("groundHitReactionsFrontLower");
 
-            this.groundHitReactionsFrontList = new ReorderableList(
+            spGroundHitReactionsBackUpper     = this.serializedObject.FindProperty("groundHitReactionsBackUpper");
+            spGroundHitReactionsBackMiddle    = this.serializedObject.FindProperty("groundHitReactionsBackMiddle");
+            spGroundHitReactionsBackLower     = this.serializedObject.FindProperty("groundHitReactionsBackLower");
+
+            spAirborneHitReactionsFrontUpper  = this.serializedObject.FindProperty("airborneHitReactionsFrontUpper");
+            spAirborneHitReactionsFrontMiddle = this.serializedObject.FindProperty("airborneHitReactionsFrontMiddle");
+            spAirborneHitReactionsFrontLower  = this.serializedObject.FindProperty("airborneHitReactionsFrontLower");
+
+            spAirborneHitReactionsBackUpper   = this.serializedObject.FindProperty("airborneHitReactionsBackUpper");
+            spAirborneHitReactionsBackMiddle  = this.serializedObject.FindProperty("airborneHitReactionsBackMiddle");                                                                      
+            spAirborneHitReactionsBackLower   = this.serializedObject.FindProperty("airborneHitReactionsBackLower");
+
+            spKnockbackReaction               = this.serializedObject.FindProperty("knockbackReaction");
+
+            //############# Ground Front ###################
+            this.groundHitReactionsFrontUpper = new ReorderableList(
                 this.serializedObject,
-                this.spGroundHitReactionFront,
+                this.spGroundHitReactionsFrontUpper,
                 true, true, true, true
             );
 
-            this.groundHitReactionsBehindList = new ReorderableList(
+            this.groundHitReactionsFrontMiddle = new ReorderableList(
                 this.serializedObject,
-                this.spGroundHitReactionBehind,
+                this.spGroundHitReactionsFrontMiddle,
                 true, true, true, true
             );
 
-            this.airborneHitReactionsFrontList = new ReorderableList(
+            this.groundHitReactionsFrontLower = new ReorderableList(
                 this.serializedObject,
-                this.spAirborneHitReactionFront,
+                this.spGroundHitReactionsFrontLower,
+                true, true, true, true
+            );
+            //############# Ground Back ###################
+            this.groundHitReactionsBackUpper = new ReorderableList(
+                this.serializedObject,
+                this.spGroundHitReactionsBackUpper,
                 true, true, true, true
             );
 
-            this.airborneHitReactionsBehindList = new ReorderableList(
+            this.groundHitReactionsBackMiddle = new ReorderableList(
                 this.serializedObject,
-                this.spAirborneHitReactionBehind,
+                this.spGroundHitReactionsBackMiddle,
                 true, true, true, true
             );
 
-            this.knockbackReactionsList = new ReorderableList(
+            this.groundHitReactionsBackLower = new ReorderableList(
                 this.serializedObject,
-                this.spKnockbackReactions,
+                this.spGroundHitReactionsBackLower,
+                true, true, true, true
+            );
+            //############# Air Front ###################
+            this.airborneHitReactionsFrontUpper = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsFrontUpper,
                 true, true, true, true
             );
 
-            this.groundHitReactionsFrontList.drawHeaderCallback += this.PaintHitGroundFront_Title;
-            this.groundHitReactionsBehindList.drawHeaderCallback += this.PaintHitGroundBehind_Title;
-            this.airborneHitReactionsFrontList.drawHeaderCallback += this.PaintHitAirFront_Title;
-            this.airborneHitReactionsBehindList.drawHeaderCallback += this.PaintHitAirBehind_Title;
-            this.knockbackReactionsList.drawHeaderCallback += this.PaintKnockback_Title;
+            this.airborneHitReactionsFrontMiddle = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsFrontMiddle,
+                true, true, true, true
+            );
 
-            this.groundHitReactionsFrontList.drawElementCallback += this.PaintHitGroundFront_Element;
-            this.groundHitReactionsBehindList.drawElementCallback += this.PaintHitGroundBehind_Element;
-            this.airborneHitReactionsFrontList.drawElementCallback += this.PaintHitAirFront_Element;
-            this.airborneHitReactionsBehindList.drawElementCallback += this.PaintHitAirBehind_Element;
-            this.knockbackReactionsList.drawElementCallback += this.PaintHitKnockback_Element;
+            this.airborneHitReactionsFrontLower = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsFrontLower,
+                true, true, true, true
+            );
+            //############# Ground Back ###################
+            this.airborneHitReactionsBackUpper = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsBackUpper,
+                true, true, true, true
+            );
+
+            this.airborneHitReactionsBackMiddle = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsBackMiddle,
+                true, true, true, true
+            );
+
+            this.airborneHitReactionsBackLower = new ReorderableList(
+                this.serializedObject,
+                this.spAirborneHitReactionsBackLower,
+                true, true, true, true
+            );
+
+            //############# knockback ###################
+            this.knockbackReaction = new ReorderableList(
+                this.serializedObject,
+                this.spKnockbackReaction,
+                true, true, true, true
+            );
+
+            groundHitReactionsFrontUpper        .drawHeaderCallback += this.PaintHitGroundFrontUpper_Title;
+            groundHitReactionsFrontMiddle       .drawHeaderCallback += this.PaintHitGroundFrontMiddle_Title;
+            groundHitReactionsFrontLower        .drawHeaderCallback += this.PaintHitGroundFrontLower_Title;
+
+            groundHitReactionsBackUpper         .drawHeaderCallback += this.PaintHitGroundBackUpper_Title;
+            groundHitReactionsBackMiddle        .drawHeaderCallback += this.PaintHitGroundBackMiddle_Title;
+            groundHitReactionsBackLower         .drawHeaderCallback += this.PaintHitGroundBackLower_Title;
+
+            airborneHitReactionsFrontUpper      .drawHeaderCallback += this.PaintHitAirFrontUpper_Title;
+            airborneHitReactionsFrontMiddle     .drawHeaderCallback += this.PaintHitAirFrontMiddle_Title;
+            airborneHitReactionsFrontLower      .drawHeaderCallback += this.PaintHitAirFrontLower_Title;
+
+            airborneHitReactionsBackUpper       .drawHeaderCallback += this.PaintHitAirBackUpper_Title;
+            airborneHitReactionsBackMiddle      .drawHeaderCallback += this.PaintHitAirBackMiddle_Title;
+            airborneHitReactionsBackLower       .drawHeaderCallback += this.PaintHitAirBackLower_Title;
+
+            knockbackReaction                   .drawHeaderCallback  += this.PaintHitKnockback_Title;
+
+            groundHitReactionsFrontUpper        .drawElementCallback += this.PaintHitGroundFrontUpper_Element;
+            groundHitReactionsFrontMiddle       .drawElementCallback += this.PaintHitGroundFrontMiddle_Element;
+            groundHitReactionsFrontLower        .drawElementCallback += this.PaintHitGroundFrontLower_Element;
+
+            groundHitReactionsBackUpper         .drawElementCallback += this.PaintHitGroundBackUpper_Element;
+            groundHitReactionsBackMiddle        .drawElementCallback += this.PaintHitGroundBackMiddle_Element;
+            groundHitReactionsBackLower         .drawElementCallback += this.PaintHitGroundBackLower_Element;
+
+            airborneHitReactionsFrontUpper      .drawElementCallback += this.PaintHitAirFrontUpper_Element;
+            airborneHitReactionsFrontMiddle     .drawElementCallback += this.PaintHitAirFrontMiddle_Element;
+            airborneHitReactionsFrontLower      .drawElementCallback += this.PaintHitAirFrontLower_Element;
+
+            airborneHitReactionsBackUpper       .drawElementCallback += this.PaintHitAirBackUpper_Element;
+            airborneHitReactionsBackMiddle      .drawElementCallback += this.PaintHitAirBackMiddle_Element;
+            airborneHitReactionsBackLower       .drawElementCallback += this.PaintHitAirBackLower_Element;
+
+            knockbackReaction                   .drawElementCallback += this.PaintHitKnockback_Element;
+
 
             this.spCombos = this.serializedObject.FindProperty("combos");
 
@@ -181,19 +286,35 @@
             EditorGUILayout.LabelField("Hit Reactions", EditorStyles.boldLabel);
 
             EditorGUILayout.Space();
-            this.groundHitReactionsFrontList.DoLayoutList();
+            groundHitReactionsFrontUpper.DoLayoutList();
+            EditorGUILayout.Space();
+            groundHitReactionsFrontMiddle.DoLayoutList();
+            EditorGUILayout.Space();
+            groundHitReactionsFrontLower.DoLayoutList();
 
             EditorGUILayout.Space();
-            this.groundHitReactionsBehindList.DoLayoutList();
+            groundHitReactionsBackUpper.DoLayoutList();
+            EditorGUILayout.Space();
+            groundHitReactionsBackMiddle.DoLayoutList();
+            EditorGUILayout.Space();
+            groundHitReactionsBackLower.DoLayoutList();
 
             EditorGUILayout.Space();
-            this.airborneHitReactionsFrontList.DoLayoutList();
+            airborneHitReactionsFrontUpper.DoLayoutList();
+            EditorGUILayout.Space();
+            airborneHitReactionsFrontMiddle.DoLayoutList();
+            EditorGUILayout.Space();
+            airborneHitReactionsFrontLower.DoLayoutList();
 
             EditorGUILayout.Space();
-            this.airborneHitReactionsBehindList.DoLayoutList();
+            airborneHitReactionsBackUpper.DoLayoutList();
+            EditorGUILayout.Space();
+            airborneHitReactionsBackMiddle.DoLayoutList();
+            EditorGUILayout.Space();
+            airborneHitReactionsBackLower.DoLayoutList();
 
             EditorGUILayout.Space();
-            this.knockbackReactionsList.DoLayoutList();
+            knockbackReaction.DoLayoutList();
 
             this.serializedObject.ApplyModifiedProperties();
         }
@@ -231,12 +352,7 @@
                 {
                     EditorGUILayout.BeginVertical(CoreGUIStyles.GetBoxExpanded());
 
-                    EditorGUILayout.PropertyField(this.spPrefab);
-                    EditorGUILayout.PropertyField(this.spAttachment);
-
-                    EditorGUILayout.Space();
-                    EditorGUILayout.PropertyField(this.spPosition);
-                    EditorGUILayout.PropertyField(this.spRotation);
+                    EditorGUILayout.PropertyField(this.spPrefabs);
 
                     EditorGUILayout.EndVertical();
                 }
@@ -269,33 +385,66 @@
         }
 
         // HIT REACTIONS: -------------------------------------------------------------------------
+            //Titles------------
 
-        private void PaintHitGroundFront_Title(Rect rect)
+        private void PaintHitGroundFrontUpper_Title(Rect rect)
         {
-            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Front");
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded Front Upper body");
+        }
+        private void PaintHitGroundFrontMiddle_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Front Mid body");
+        }
+        private void PaintHitGroundFrontLower_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Front Lower body");
         }
 
-        private void PaintHitGroundBehind_Title(Rect rect)
+        private void PaintHitGroundBackUpper_Title(Rect rect)
         {
-            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Behind");
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Behind Upper body");
+        }
+        private void PaintHitGroundBackMiddle_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Behind Mid body");
+        }
+        private void PaintHitGroundBackLower_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Grounded & Behind Lower body");
         }
 
-        private void PaintHitAirFront_Title(Rect rect)
+        private void PaintHitAirFrontUpper_Title(Rect rect)
         {
-            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Frontal");
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Frontal Upper body");
+        }
+        private void PaintHitAirFrontMiddle_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Frontal Mid body");
+        }
+        private void PaintHitAirFrontLower_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Frontal Upper body");
         }
 
-        private void PaintHitAirBehind_Title(Rect rect)
+        private void PaintHitAirBackUpper_Title(Rect rect)
         {
-            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Behind");
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Behind Upper body");
+        }
+        private void PaintHitAirBackMiddle_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Behind Mid body");
+        }
+        private void PaintHitAirBackLower_Title(Rect rect)
+        {
+            EditorGUI.LabelField(rect, "Hit Reaction - Airborne & Behind Upper body");
         }
 
-        private void PaintKnockback_Title(Rect rect)
+        private void PaintHitKnockback_Title(Rect rect)
         {
             EditorGUI.LabelField(rect, "Hit Reaction - Knockback");
         }
-
-        private void PaintHitGroundFront_Element(Rect rect, int index, bool isActive, bool isFocused)
+            //Elements --- Ground Front
+        private void PaintHitGroundFrontUpper_Element(Rect rect, int index, bool isActive, bool isFocused)
         {
             rect = new Rect(
                 rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
@@ -303,12 +452,11 @@
             );
 
             EditorGUI.PropertyField(
-                rect, this.spGroundHitReactionFront.GetArrayElementAtIndex(index),
+                rect, this.spGroundHitReactionsFrontUpper.GetArrayElementAtIndex(index),
                 GC_REACTION, true
             );
         }
-
-        private void PaintHitGroundBehind_Element(Rect rect, int index, bool isActive, bool isFocused)
+        private void PaintHitGroundFrontMiddle_Element(Rect rect, int index, bool isActive, bool isFocused)
         {
             rect = new Rect(
                 rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
@@ -316,12 +464,11 @@
             );
 
             EditorGUI.PropertyField(
-                rect, this.spGroundHitReactionBehind.GetArrayElementAtIndex(index),
+                rect, this.spGroundHitReactionsFrontMiddle.GetArrayElementAtIndex(index),
                 GC_REACTION, true
             );
         }
-
-        private void PaintHitAirFront_Element(Rect rect, int index, bool isActive, bool isFocused)
+        private void PaintHitGroundFrontLower_Element(Rect rect, int index, bool isActive, bool isFocused)
         {
             rect = new Rect(
                 rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
@@ -329,12 +476,12 @@
             );
 
             EditorGUI.PropertyField(
-                rect, this.spAirborneHitReactionFront.GetArrayElementAtIndex(index),
+                rect, this.spGroundHitReactionsFrontLower.GetArrayElementAtIndex(index),
                 GC_REACTION, true
             );
         }
-
-        private void PaintHitAirBehind_Element(Rect rect, int index, bool isActive, bool isFocused)
+        //Elements --- Ground Back
+        private void PaintHitGroundBackUpper_Element(Rect rect, int index, bool isActive, bool isFocused)
         {
             rect = new Rect(
                 rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
@@ -342,11 +489,112 @@
             );
 
             EditorGUI.PropertyField(
-                rect, this.spAirborneHitReactionBehind.GetArrayElementAtIndex(index),
+                rect, this.spGroundHitReactionsBackUpper.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitGroundBackMiddle_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spGroundHitReactionsBackMiddle.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitGroundBackLower_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spGroundHitReactionsBackLower.GetArrayElementAtIndex(index),
                 GC_REACTION, true
             );
         }
 
+        //Elements --- Air Front
+        private void PaintHitAirFrontUpper_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsFrontUpper.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitAirFrontMiddle_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsFrontMiddle.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitAirFrontLower_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsFrontLower.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+
+        //Elements --- Ground Back
+        private void PaintHitAirBackUpper_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsBackUpper.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitAirBackMiddle_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsBackMiddle.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+        private void PaintHitAirBackLower_Element(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            rect = new Rect(
+                rect.x, rect.y + (rect.height - EditorGUIUtility.singleLineHeight) / 2f,
+                rect.width, EditorGUIUtility.singleLineHeight
+            );
+
+            EditorGUI.PropertyField(
+                rect, this.spAirborneHitReactionsBackLower.GetArrayElementAtIndex(index),
+                GC_REACTION, true
+            );
+        }
+
+        //Elements --- knockback
         private void PaintHitKnockback_Element(Rect rect, int index, bool isActive, bool isFocused)
         {
             rect = new Rect(
@@ -355,7 +603,7 @@
             );
 
             EditorGUI.PropertyField(
-                rect, this.spKnockbackReactions.GetArrayElementAtIndex(index),
+                rect, this.spKnockbackReaction.GetArrayElementAtIndex(index),
                 GC_REACTION, true
             );
         }

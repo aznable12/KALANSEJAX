@@ -8,6 +8,7 @@
     [CustomEditor(typeof(CharacterMelee))]
     public class CharacterMeleeEditor : Editor
     {
+        private SerializedProperty spSheathedHitReactions;
         private SerializedProperty spCurrentWeapon;
         private SerializedProperty spCurrentShield;
 
@@ -19,6 +20,8 @@
 
         private void OnEnable()
         {
+            this.spSheathedHitReactions = this.serializedObject.FindProperty("sheathedHitReactions");
+
             this.spCurrentWeapon = this.serializedObject.FindProperty("currentWeapon");
             this.spCurrentShield = this.serializedObject.FindProperty("currentShield");
 
@@ -39,6 +42,9 @@
             EditorGUI.EndDisabledGroup();
 
             EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(this.spSheathedHitReactions);
+            EditorGUILayout.Space();
+
             EditorGUILayout.PropertyField(this.spPoiseDelay);
             EditorGUILayout.PropertyField(this.spPoiseMax);
             EditorGUILayout.PropertyField(this.spPoiseRecovery);
