@@ -13632,6 +13632,7 @@ GameObject:
   - component: {fileID: 467487465}
   - component: {fileID: 467487464}
   - component: {fileID: 467487467}
+  - component: {fileID: 467487468}
   m_Layer: 0
   m_Name: Ruli
   m_TagString: Player
@@ -13944,6 +13945,71 @@ MonoBehaviour:
   currentWeapon: {fileID: 0}
   currentAmmo: {fileID: 0}
   chargeShotStartTime: 0
+--- !u!114 &467487468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467487458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5fa3ce8148f4c68a1375bd243117a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheathedHitReactions: {fileID: 0}
+  currentWeapon: {fileID: 0}
+  currentShield: {fileID: 0}
+  previousWeapon: {fileID: 0}
+  previousShield: {fileID: 0}
+  delayPoise:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  maxPoise:
+    optionIndex: 0
+    value: 5
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  poiseRecoveryRate:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
 --- !u!1 &467719072
 GameObject:
   m_ObjectHideFlags: 0
