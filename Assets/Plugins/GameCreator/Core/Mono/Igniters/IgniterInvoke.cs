@@ -1,4 +1,4 @@
-﻿namespace GameCreator.Core
+﻿ namespace GameCreator.Core
 {
 	using System.Collections;
 	using System.Collections.Generic;
