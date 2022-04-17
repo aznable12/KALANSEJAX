@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6127778902043319522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.53, y: 1, z: 0}
+  m_LocalPosition: {x: -0.286, y: -0.078, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 607860205534467230}
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ce5ca9303944be08d0e95a6aab1c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bone: 18
   captureHits: 2
   layerMask:
     serializedVersion: 2
@@ -85,6 +86,10 @@ PrefabInstance:
       value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -97,6 +102,10 @@ PrefabInstance:
       value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -106,14 +115,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
@@ -136,7 +137,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
 --- !u!4 &607860205534467230 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 400000, guid: dd78b1074455a4c7d89c48a304f52b6a, type: 3}
   m_PrefabInstance: {fileID: 607860205534596638}
   m_PrefabAsset: {fileID: 0}
