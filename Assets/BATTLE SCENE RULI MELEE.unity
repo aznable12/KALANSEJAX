@@ -3811,6 +3811,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6872240068389958783, guid: 9aaa97479ed969f40be0e44149e33b04, type: 3}
   m_PrefabInstance: {fileID: 1552536154}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &109908356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 470868082}
+    m_Modifications:
+    - target: {fileID: 1557191216993458199, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_Name
+      value: keris
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -47.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222404944817849005, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a84d895993db6f4ba0686edca3152cf, type: 3}
 --- !u!4 &112148351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6872240068389958783, guid: 9aaa97479ed969f40be0e44149e33b04, type: 3}
@@ -20902,7 +20959,6 @@ GameObject:
   - component: {fileID: 561111658}
   - component: {fileID: 561111661}
   - component: {fileID: 561111660}
-  - component: {fileID: 561111659}
   m_Layer: 0
   m_Name: Actions
   m_TagString: Untagged
@@ -20924,38 +20980,6 @@ Transform:
   m_Father: {fileID: 1109970525}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &561111659
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561111657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba9eb0846af144529dcdbf0cbe397c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isExpanded: 1
-  character:
-    target: 2
-    character: {fileID: 470868081}
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    global:
-      allowTypesMask: 512
-      name: 
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!114 &561111660
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20968,8 +20992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 561111659}
+  actions: []
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &561111661
@@ -40704,8 +40727,6 @@ GameObject:
   - component: {fileID: 1109970531}
   - component: {fileID: 1109970530}
   - component: {fileID: 1109970529}
-  - component: {fileID: 1109970528}
-  - component: {fileID: 1109970526}
   - component: {fileID: 1109970534}
   - component: {fileID: 1109970533}
   - component: {fileID: 1109970527}
@@ -40733,19 +40754,6 @@ Transform:
   m_Father: {fileID: 72364096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109970526
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109970524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions: []
 --- !u!114 &1109970527
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -40779,28 +40787,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   condition: 0
---- !u!114 &1109970528
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109970524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3247faaff1642b0aa83bf65ab47007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: Clause
-  conditionsList: {fileID: 1109970526}
-  actions: {fileID: 0}
-  isExpanded: 0
-  onCheckConditions:
-    m_PersistentCalls:
-      m_Calls: []
-  onExecuteActions:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1109970529
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -40884,8 +40870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clauses:
   - {fileID: 1109970531}
-  - {fileID: 1109970528}
-  - {fileID: 1109970534}
   defaultActions: {fileID: 561111661}
   onInteract:
     m_PersistentCalls:
