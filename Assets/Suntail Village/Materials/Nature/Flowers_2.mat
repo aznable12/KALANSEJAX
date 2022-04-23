@@ -8,13 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Flowers_2
-  m_Shader: {fileID: 4800000, guid: 1d10d370c3f169448b4d855d9b93645f, type: 3}
-  m_ShaderKeywords: _ENABLEWIND_ON _SECONDCOLOROVERLAYTYPE_VERTEX_POSITION_BASED
+  m_Shader: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -27,11 +28,27 @@ Material:
         m_Texture: {fileID: 2800000, guid: 69e658f08f8dca64db8de866300b53bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BakedGIRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: baac77a69801b814db973a5b99aa0733, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ClearCoatMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -44,6 +61,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GradientRamp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -67,6 +88,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 69e658f08f8dca64db8de866300b53bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture:
         m_Texture: {fileID: 2800000, guid: 69e658f08f8dca64db8de866300b53bb, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -75,23 +100,63 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WindMap:
+        m_Texture: {fileID: 2800000, guid: 58ee3d953f2ad1d4bb6dce9e0821b8c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaClip: 0
     - _AlphaCutoff: 0.35
+    - _AlphaToCoverage: 0
     - _Anchorthefoliagebase: 0
+    - _AngleFading: 0
+    - _BendFlattenStrength: 1
+    - _BendMode: 0
+    - _BendPushStrength: 1
+    - _Billboard: 0
+    - _Blend: 0
     - _BumpScale: 1
+    - _CameraDistanceImpact: 0.5
+    - _ClearCoat: 0
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 1
     - _Color2Enable: 0
     - _Color3Enable: 0
+    - _ColorMapHeight: 1
+    - _ColorMapStrength: 0
+    - _Cull: 2
     - _Cutoff: 0.5
     - _Cutofff: 0.35
+    - _DetailAlbedoMapScale: 1
+    - _DetailMapBlendingMode: 0
+    - _DetailMapImpact: 0
     - _DetailNormalMapScale: 1
     - _DirectLightInt: 1
     - _DirectLightOffset: 0.4
     - _DstBlend: 0
     - _EnableWind: 1
+    - _EnvironmentReflections: 1
+    - _FlatRimEdgeSmoothness: 0.5
+    - _FlatRimLightAlign: 0
+    - _FlatRimSize: 0.5
+    - _FlatSpecularEdgeSmoothness: 0
+    - _FlatSpecularSize: 0.1
     - _Float1: 2
     - _Float2: 0
     - _Float3: 0.395
@@ -100,22 +165,51 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GradientAngle: 0
+    - _GradientCenterX: 0
+    - _GradientCenterY: 0
+    - _GradientEnabled: 0
+    - _GradientSize: 10
     - _IndirectLightInt: 1
+    - _LightContribution: 1
+    - _LightingMode: 2
+    - _LightmapDirectionPitch: 0
+    - _LightmapDirectionYaw: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OutlineDepthOffset: 0
+    - _OutlineEnabled: 0
+    - _OutlineWidth: 1
+    - _OverrideBakedGi: 0
+    - _OverrideLightAttenuation: 0
+    - _OverrideLightmapDir: 0
     - _Parallax: 0.02
+    - _PerspectiveCorrection: 1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RimEnabled: 0
+    - _Scalemap: 0
     - _SecondColorFade: 0.5
     - _SecondColorOffset: 0
     - _SecondColorOverlayType: 0
+    - _SelfShadingSize: 0
     - _Shininess: 0.1
     - _Smoothness: 0.4
     - _SmoothnessInt: 0.5
     - _SmoothnessTextureChannel: 0
+    - _SpecularEnabled: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Surface: 0
+    - _TextureBlendingMode: 0
+    - _TextureImpact: 1
     - _Tiling: 1
+    - _Translucency: 0.2
+    - _TranslucencyFalloff: 4
+    - _TranslucencyIndirect: 0
     - _TranslucencyInt: 0
+    - _TranslucencyOffset: 0
     - _UVNoiseOffset: 0
     - _UVSec: 0
     - _UVSmallWindInt: 0
@@ -125,17 +219,47 @@ Material:
     - _UVWindSpeed1: 1
     - _UVWindStr: 1
     - _UVWindWavesScale: 0.25
+    - _UnityShadowOcclusion: 0
+    - _VertexColorsEnabled: 0
+    - _VertexDarkening: 0.1
     - _VisualWindEnable: 0
     - _VisualWindInt: 0
+    - _WindAmbientStrength: 0.2
     - _WindForce: 0.3
+    - _WindGustFreq: 4
+    - _WindGustStrength: 0.2
+    - _WindGustTint: 0.066
+    - _WindObjectRand: 0.5
+    - _WindRandStrength: 0.5
     - _WindSpeed: 0.4
+    - _WindSwinging: 0.15
+    - _WindVertexRand: 0.6
     - _WindWavesScale: 0.25
+    - _WorkflowMode: 1
     - _WorldScale: 1
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BendTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.5647059, g: 0.07058824, b: 0.14817911, a: 0}
+    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
+    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _HueVariation: {r: 1, g: 0.63, b: 0, a: 0.15}
+    - _LODDebugColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightAttenuation: {r: 0, g: 1, b: 0, a: 0}
+    - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _MainColor: {r: 1, g: 0.81695867, b: 0, a: 0}
+    - _NormalParams: {r: 0, g: 1, b: 0, a: 0}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ScalemapInfluence: {r: 0, g: 1, b: 0, a: 0}
     - _SecondColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
