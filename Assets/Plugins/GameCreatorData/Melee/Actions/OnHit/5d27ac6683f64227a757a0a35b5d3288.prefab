@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8625152231926913208}
   - component: {fileID: 5650769634269690493}
   - component: {fileID: 459754666219233544}
-  - component: {fileID: -734509850509024865}
+  - component: {fileID: -7390917324030643004}
   m_Layer: 0
   m_Name: 5d27ac6683f64227a757a0a35b5d3288
   m_TagString: Untagged
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: -734509850509024865}
+  - {fileID: -7390917324030643004}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &459754666219233544
@@ -141,7 +141,7 @@ MonoBehaviour:
       select: 1
       index: 0
   formula: {fileID: 0}
---- !u!114 &-734509850509024865
+--- !u!114 &-7390917324030643004
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,13 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7968e776b128c48a6bfe0dfc297c41dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
+  isExpanded: 1
   target:
-    target: 6
+    target: 2
     gameObject: {fileID: 0}
     global:
       allowTypesMask: 512
-      name: Target
+      name: 
     local:
       allowTypesMask: 512
       name: 
@@ -196,11 +196,11 @@ MonoBehaviour:
   operation: 2
   valueType: 0
   amount:
-    optionIndex: 0
-    value: 3
+    optionIndex: 1
+    value: 1
     global:
       allowTypesMask: 4
-      name: 
+      name: Player-Damage-STR
     local:
       allowTypesMask: 4
       name: 
