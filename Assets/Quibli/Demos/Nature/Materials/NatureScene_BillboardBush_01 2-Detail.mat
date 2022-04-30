@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NatureScene_BillboardBush_01 2-Detail
-  m_Shader: {fileID: -6465566751694194690, guid: 28375c8afd8fa4900b90e1d5a4b6d88c, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 28375c8afd8fa4900b90e1d5a4b6d88c,
+    type: 3}
   m_ShaderKeywords: BILLBOARD_ROTATION_WHOLE_OBJECT _DETAILMAPBLENDINGMODE_MULTIPLY
     _TEXTUREBLENDINGMODE_MULTIPLY
   m_LightmapFlags: 4
@@ -113,8 +114,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-    - BILLBOARD_FACE_CAMERA_POSITION: 0
     - BILLBOARD_ROTATION: 2
     - Billboard_Scale: 1
     - Clip_Threshold: 0.933
@@ -187,7 +188,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Fresnel_Color: {r: 0.06891531, g: 0.9528302, b: 0.51632905, a: 0.078431375}
+    - Fresnel_Color: {r: 0.68396217, g: 1, b: 0.8415377, a: 0.078431375}
     - Wind_Direction: {r: 1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,7 +208,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: z__ShadingGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.2541879117488861,"g":0.4811320900917053,"b":0.18458524346351624,"a":1.0},"time":0.0},{"color":{"r":0.9890313148498535,"g":1.0,"b":0.8820754885673523,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_Name: z__ShadingGradientTextureTex{"mode":0,"colorKeys":[{"color":{"r":0.9890313148498535,"g":1.0,"b":0.8820754885673523,"a":1.0},"time":0.0},{"color":{"r":0.9890313148498535,"g":1.0,"b":0.8820754885673523,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -242,7 +243,7 @@ Texture2D:
   m_ColorSpace: 1
   m_PlatformBlob: 
   image data: 1024
-  _typelessdata: ff417b2fff427b30ff427c30ff437c31ff447d32ff447d33ff457e33ff467e34ff477f35ff477f35ff488036ff498037ff4a8137ff4a8138ff4b8239ff4c823aff4d833aff4d843bff4e843cff4f853cff50853dff50863eff51863eff52873fff528740ff538841ff548841ff558942ff558943ff568a43ff578a44ff588b45ff588b45ff598c46ff5a8c47ff5b8d47ff5b8d48ff5c8e49ff5d8e4aff5d8f4aff5e8f4bff5f904cff60904cff60914dff61924eff62924eff63934fff639350ff649451ff659451ff669552ff669553ff679653ff689654ff689755ff699755ff6a9856ff6b9857ff6b9958ff6c9958ff6d9a59ff6e9a5aff6e9b5aff6f9b5bff709c5cff719c5cff719d5dff729d5eff739e5eff749e5fff749f60ff75a061ff76a061ff76a162ff77a163ff78a263ff79a264ff79a365ff7aa365ff7ba466ff7ca467ff7ca568ff7da568ff7ea669ff7fa66aff7fa76aff80a76bff81a86cff81a86cff82a96dff83a96eff84aa6fff84aa6fff85ab70ff86ab71ff87ac71ff87ad72ff88ad73ff89ae73ff8aae74ff8aaf75ff8baf76ff8cb076ff8db077ff8db178ff8eb178ff8fb279ff8fb27aff90b37aff91b37bff92b47cff92b47cff93b57dff94b57eff95b67fff95b67fff96b780ff97b781ff98b881ff98b882ff99b983ff9ab983ff9aba84ff9bbb85ff9cbb86ff9dbc86ff9dbc87ff9ebd88ff9fbd88ffa0be89ffa0be8affa1bf8affa2bf8bffa3c08cffa3c08dffa4c18dffa5c18effa5c28fffa6c28fffa7c390ffa8c391ffa8c491ffa9c492ffaac593ffabc594ffabc694ffacc695ffadc796ffaec796ffaec897ffafc998ffb0c998ffb1ca99ffb1ca9affb2cb9affb3cb9bffb3cc9cffb4cc9dffb5cd9dffb6cd9effb6ce9fffb7ce9fffb8cfa0ffb9cfa1ffb9d0a1ffbad0a2ffbbd1a3ffbcd1a4ffbcd2a4ffbdd2a5ffbed3a6ffbed3a6ffbfd4a7ffc0d4a8ffc1d5a8ffc1d5a9ffc2d6aaffc3d7abffc4d7abffc4d8acffc5d8adffc6d9adffc7d9aeffc7daafffc8daafffc9dbb0ffc9dbb1ffcadcb1ffcbdcb2ffccddb3ffccddb4ffcddeb4ffcedeb5ffcfdfb6ffcfdfb6ffd0e0b7ffd1e0b8ffd2e1b8ffd2e1b9ffd3e2baffd4e2bbffd5e3bbffd5e4bcffd6e4bdffd7e5bdffd7e5beffd8e6bfffd9e6bfffdae7c0ffdae7c1ffdbe8c2ffdce8c2ffdde9c3ffdde9c4ffdeeac4ffdfeac5ffe0ebc6ffe0ebc6ffe1ecc7ffe2ecc8ffe2edc9ffe3edc9ffe4eecaffe5eecbffe5efcbffe6efccffe7f0cdffe8f0cdffe8f1ceffe9f2cfffeaf2cfffebf3d0ffebf3d1ffecf4d2ffedf4d2ffeef5d3ffeef5d4ffeff6d4fff0f6d5fff0f7d6fff1f7d6fff2f8d7fff3f8d8fff3f9d9fff4f9d9fff5fadafff6fadbfff6fbdbfff7fbdcfff8fcddfff9fcddfff9fddefffafddffffbfee0fffbfee0fffcffe1
+  _typelessdata: fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1fffcffe1
   m_StreamData:
     serializedVersion: 2
     offset: 0

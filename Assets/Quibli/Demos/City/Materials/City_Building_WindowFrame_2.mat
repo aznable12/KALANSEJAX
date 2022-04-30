@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: City_Building_WindowFrame_2
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
-  m_ShaderKeywords: DR_GRADIENT_ON _DETAILMAPBLENDINGMODE_MULTIPLY _NORMALMAP _TEXTUREBLENDINGMODE_MULTIPLY
+  m_ShaderKeywords: _DETAILMAPBLENDINGMODE_MULTIPLY _TEXTUREBLENDINGMODE_MULTIPLY
     _UNITYSHADOWMODE_COLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -27,11 +27,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 066fd8f5635f1ce4396022e5c289e7f9, type: 3}
+        m_Texture: {fileID: 2800000, guid: a8b1fcee81f4f42b2861848d4a721b5f, type: 3}
         m_Scale: {x: 15, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 81e91d1448d504a45b60cec38b3f8424, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
-        m_Texture: {fileID: 2800000, guid: 78b6e5a8d8813ff499cc244d0ce6bdd1, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -113,10 +113,10 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GradientAngle: 163
+    - _GradientAngle: 0
     - _GradientCenterX: 0
     - _GradientCenterY: 0
-    - _GradientEnabled: 1
+    - _GradientEnabled: 0
     - _GradientSize: 10
     - _LightContribution: 0.299
     - _LightFalloffSize: 0.0001
@@ -143,7 +143,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TextureBlendingMode: 0
-    - _TextureImpact: 1
+    - _TextureImpact: 0.414
     - _UnityShadowMode: 2
     - _UnityShadowOcclusion: 0
     - _UnityShadowPower: 0.211

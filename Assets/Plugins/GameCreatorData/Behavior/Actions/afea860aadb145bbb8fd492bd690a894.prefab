@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8277852066521535355}
   - component: {fileID: 6293261439871501037}
   - component: {fileID: 237015214224813250}
+  - component: {fileID: 6978079642963249936}
   m_Layer: 0
   m_Name: afea860aadb145bbb8fd492bd690a894
   m_TagString: Untagged
@@ -69,6 +70,7 @@ MonoBehaviour:
   actions:
   - {fileID: 6293261439871501037}
   - {fileID: 237015214224813250}
+  - {fileID: 6978079642963249936}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &6293261439871501037
@@ -105,7 +107,7 @@ MonoBehaviour:
         m_Calls: []
   prefabModel:
     target: 3
-    gameObject: {fileID: 0}
+    gameObject: {fileID: 8679044239159427678, guid: b2d397fc82c62fa4dba55c92516766b2, type: 3}
     global:
       allowTypesMask: 512
       name: 
@@ -155,5 +157,76 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   drawPreviousWeapon: 0
-  meleeWeapon: {fileID: 0}
+  meleeWeapon: {fileID: 11400000, guid: b453b43ddb69f7e49af943aa841d6d5d, type: 2}
   meleeShield: {fileID: 0}
+--- !u!114 &6978079642963249936
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505295926345362603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfa5e142bcfe42198c0a07caf282dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  target:
+    target: 2
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  opponent:
+    target: 2
+    gameObject: {fileID: 0}
+    global:
+      allowTypesMask: -1
+      name: 
+    local:
+      allowTypesMask: -1
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  stat: {fileID: 114175997067868362, guid: 0431ef4462ebb4e059a79b2feeb54f7c, type: 2}
+  operation: 0
+  valueType: 0
+  amount:
+    optionIndex: 0
+    value: 3000
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  formula: {fileID: 0}
