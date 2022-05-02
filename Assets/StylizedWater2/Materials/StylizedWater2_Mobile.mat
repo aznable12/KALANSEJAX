@@ -10,8 +10,8 @@ Material:
   m_Name: StylizedWater2_Mobile
   m_Shader: {fileID: 4800000, guid: f04c9486b297dd848909db26983c9ddb, type: 3}
   m_ShaderKeywords: ADVANCED_LIGHTING _ADVANCED_SHADING _CAUSTICS _CROSSPAN_INTERSECTION
-    _DEPTH_TEX _FOAM _NORMALMAP _REFRACTION _RIVER _SHARP_INERSECTION _SIMPLE_LIGHTING
-    _TRANSLUCENCY _UNLIT _WORLDSPACEUV_ON
+    _DEPTH_TEX _ENVIRONMENTREFLECTIONS_OFF _FOAM _NORMALMAP _REFRACTION _RIVER _SHARP_INERSECTION
+    _SIMPLE_LIGHTING _TRANSLUCENCY _UNLIT _WORLDSPACEUV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -181,10 +181,10 @@ Material:
     - _SparkleSize: 0.7
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _SunReflectionDistortion: 2
+    - _SunReflectionDistortion: 0.49
     - _SunReflectionPerturbance: 0.548
-    - _SunReflectionSize: 0.566
-    - _SunReflectionStrength: 1.48
+    - _SunReflectionSize: 0.943
+    - _SunReflectionStrength: 3
     - _Surface: 0
     - _TEXTURE_INTERSECTIONOn: 0
     - _Texture_IntersectionOn: 1
