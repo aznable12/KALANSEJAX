@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 445897582301385881}
   - component: {fileID: 114984249092260278}
   - component: {fileID: 114569912202740014}
-  - component: {fileID: 3892845724266766514}
+  - component: {fileID: 114210926873378364}
+  - component: {fileID: 114683197752402010}
+  - component: {fileID: 114890785678132778}
+  - component: {fileID: 114279400075154994}
   m_Layer: 0
   m_Name: 674572f58a1444f4bfc4db8d4774c092
   m_TagString: Untagged
@@ -46,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed1d9880e2ba45b0b16d09f57c5b9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditions: {fileID: 3892845724266766514}
+  conditions: {fileID: 0}
   onComplete: {fileID: 114984249092260278}
   onFail: {fileID: 0}
 --- !u!114 &114984249092260278
@@ -63,6 +66,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 114569912202740014}
+  - {fileID: 114210926873378364}
+  - {fileID: 114683197752402010}
+  - {fileID: 114890785678132778}
+  - {fileID: 114279400075154994}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &114569912202740014
@@ -77,19 +84,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ebd02693c4334590b04671f82f1ddad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  quest: {fileID: 114100349208120626, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
-  status: 2
---- !u!114 &3892845724266766514
+  isExpanded: 0
+  quest: {fileID: 114082004578071952, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
+  status: 1
+--- !u!114 &114210926873378364
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826259292352769893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ebd02693c4334590b04671f82f1ddad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditions: []
+  isExpanded: 0
+  quest: {fileID: 114700164890502156, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
+  status: 1
+--- !u!114 &114683197752402010
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826259292352769893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebd02693c4334590b04671f82f1ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 0
+  quest: {fileID: 114549202377082124, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
+  status: 1
+--- !u!114 &114890785678132778
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826259292352769893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebd02693c4334590b04671f82f1ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 0
+  quest: {fileID: 114703024333072266, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
+  status: 1
+--- !u!114 &114279400075154994
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826259292352769893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebd02693c4334590b04671f82f1ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 0
+  quest: {fileID: 114025235498648472, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
+  status: 1

@@ -69,7 +69,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: SGS_TreeBranch
   m_Shader: {fileID: 4800000, guid: d7dd1c3f4cba1d441a7d295a168bac0d, type: 3}
-  m_ShaderKeywords: _ANGLE_FADING _SIMPLE_LIGHTING
+  m_ShaderKeywords: _ANGLE_FADING _ENVIRONMENTREFLECTIONS_OFF _SIMPLE_LIGHTING
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
@@ -142,7 +142,7 @@ Material:
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
     - _ColorMapHeight: 1
-    - _ColorMapStrength: 0
+    - _ColorMapStrength: 0.334
     - _ColorMode: 0
     - _Cull: 0
     - _Cutoff: 0.717
@@ -214,7 +214,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeParams: {r: 50, g: 100, b: 0, a: 0}
     - _HeightmapScaleInfluence: {r: 0, g: 1, b: 0, a: 0}
-    - _HueVariation: {r: 1, g: 0.84278667, b: 0, a: 1}
+    - _HueVariation: {r: 0.27754873, g: 0.8301887, b: 0.2636762, a: 1}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _LODDebugColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalParams: {r: 0, g: 0, b: 0, a: 0}
