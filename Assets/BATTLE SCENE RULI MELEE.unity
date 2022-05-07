@@ -8665,6 +8665,7 @@ GameObject:
   - component: {fileID: 292504604}
   - component: {fileID: 292504603}
   - component: {fileID: 292504602}
+  - component: {fileID: 292504605}
   m_Layer: 0
   m_Name: Ruli
   m_TagString: Untagged
@@ -8831,6 +8832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 292504602}
+  - {fileID: 292504605}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &292504604
@@ -8853,6 +8855,39 @@ MonoBehaviour:
   onFinish:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &292504605
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292504597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  target:
+    target: 3
+    gameObject: {fileID: 31442781}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  active: 0
 --- !u!1 &293874809
 GameObject:
   m_ObjectHideFlags: 0
@@ -34060,6 +34095,7 @@ GameObject:
   - component: {fileID: 1103461866}
   - component: {fileID: 1103461865}
   - component: {fileID: 1103461864}
+  - component: {fileID: 1103461870}
   m_Layer: 0
   m_Name: Budi
   m_TagString: Untagged
@@ -34132,6 +34168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 1103461864}
+  - {fileID: 1103461870}
   executingIndex: -1
   isExecuting: 0
 --- !u!114 &1103461866
@@ -34248,6 +34285,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103461862}
   m_CullTransparentMesh: 1
+--- !u!114 &1103461870
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103461862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  target:
+    target: 3
+    gameObject: {fileID: 31442781}
+    global:
+      allowTypesMask: 512
+      name: 
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  active: 1
 --- !u!1001 &1106877094
 PrefabInstance:
   m_ObjectHideFlags: 0
