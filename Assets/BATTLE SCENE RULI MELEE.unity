@@ -8581,7 +8581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 292504604}
         m_TargetAssemblyTypeName: GameCreator.Core.Actions, Assembly-CSharp-firstpass
-        m_MethodName: 
+        m_MethodName: Execute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8659,7 +8659,7 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
-  waitToFinish: 0
+  waitToFinish: 1
 --- !u!114 &292504603
 MonoBehaviour:
   m_ObjectHideFlags: 3
