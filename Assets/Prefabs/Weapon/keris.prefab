@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2222404944817849005}
   - component: {fileID: 8873763671749343911}
+  - component: {fileID: 2139200402352453515}
   m_Layer: 0
   m_Name: keris
   m_TagString: Untagged
@@ -126,7 +127,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ce5ca9303944be08d0e95a6aab1c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bone: 18
+  captureHits: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  segmentResolution: 0.05
+  pointA: {x: 0, y: 0, z: 0}
+  pointB: {x: 0, y: 0, z: 1.5}
+  radius: 0.5
+  offset: {x: 0, y: 0, z: 0}
+  boxInterframePredictions: 5
+  boxCenter: {x: 0.07, y: 0.43, z: 0.19}
+  boxSize: {x: -0.06, y: 0.85, z: 0.21}
+  debugMode: 1
+  EventAttackStart:
+    m_PersistentCalls:
+      m_Calls: []
+  EventAttackEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  EventAttackActivation:
+    m_PersistentCalls:
+      m_Calls: []
+  EventAttackRecovery:
+    m_PersistentCalls:
+      m_Calls: []
+  enableWeaponTrail: 0
+  trailMaterial: {fileID: 2100000, guid: 1fe937e108cbdb64283f9a01cca1abbc, type: 2}
+  trailGranularity: 60
+  trailDuration: 0.5
+--- !u!114 &2139200402352453515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557191216993458199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ce5ca9303944be08d0e95a6aab1c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   captureHits: 2
   layerMask:
     serializedVersion: 2

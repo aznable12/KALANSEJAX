@@ -54,8 +54,6 @@ MonoBehaviour:
   onFinish:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &8913239204328849325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +86,6 @@ MonoBehaviour:
   isExpanded: 0
   audioClip: {fileID: 8300000, guid: 130f1b88264d3446a82ec430f8ce0d1d, type: 3}
   fadeOut: 0
-  fadeOutTime: 0
 --- !u!114 &114653230095771052
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -101,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d7be1b910bc48cda9cb586c1cdce91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
+  isExpanded: 1
   character:
     target: 1
     character: {fileID: 0}
@@ -121,8 +118,6 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: GameCreator.Core.TargetCharacter+ChangeEvent, Assembly-CSharp-firstpass,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   action: 1
   layer: 2
   avatarMask: {fileID: 0}
