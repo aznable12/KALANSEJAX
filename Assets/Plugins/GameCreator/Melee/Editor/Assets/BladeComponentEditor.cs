@@ -8,6 +8,9 @@
         // PRIVATE PROPERTIES: --------------------------------------------------------------------
 
         private SerializedProperty spCaptureMode;
+        private SerializedProperty spBone;
+        private SerializedProperty spPositionOffset;
+        private SerializedProperty spRotationOffset;
         private SerializedProperty spLayerMask;
         private SerializedProperty spSegmentResolution;
         private SerializedProperty spPointA;
@@ -34,6 +37,8 @@
         private void OnEnable()
         {
             this.spCaptureMode = this.serializedObject.FindProperty("captureHits");
+            this.spBone = this.serializedObject.FindProperty("bone");
+
             this.spLayerMask = this.serializedObject.FindProperty("layerMask");
 
             this.spSegmentResolution = this.serializedObject.FindProperty("segmentResolution");
@@ -65,7 +70,10 @@
             this.serializedObject.Update();
 
             EditorGUILayout.PropertyField(this.spEnableDebug);
-
+            EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(this.spBone);
+			
+			
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Blade Edge", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(this.spPointA);
