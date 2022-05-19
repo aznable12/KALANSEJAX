@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExpanded: 1
   target:
-    target: 3
+    target: 2
     gameObject: {fileID: 2135970738225947095, guid: d0202d86d82bd6945a8310050e87acec, type: 3}
     global:
       allowTypesMask: 512
