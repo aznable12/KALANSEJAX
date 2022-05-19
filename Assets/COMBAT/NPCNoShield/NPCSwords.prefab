@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0.39667502, y: 0.5632817, z: -0.6320642, w: 0.35476407}
   m_LocalPosition: {x: 0.045, y: -0.033, z: -0.045}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -94,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ce5ca9303944be08d0e95a6aab1c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bone: 18
   captureHits: 2
   layerMask:
     serializedVersion: 2
@@ -119,7 +122,7 @@ MonoBehaviour:
   EventAttackRecovery:
     m_PersistentCalls:
       m_Calls: []
-  enableWeaponTrail: 1
+  enableWeaponTrail: 0
   trailMaterial: {fileID: 2100000, guid: 06003196ec1a99b438a60183d711072f, type: 2}
   trailGranularity: 60
   trailDuration: 0.5
