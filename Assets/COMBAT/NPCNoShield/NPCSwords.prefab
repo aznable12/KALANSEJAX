@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4594411899755993982}
   - component: {fileID: 607276569589159131}
   - component: {fileID: 3425424690478800913}
-  - component: {fileID: -4928489316459762419}
+  - component: {fileID: 8877067334072022301}
   m_Layer: 0
   m_Name: NPCSwords
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-4928489316459762419
+--- !u!114 &8877067334072022301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,12 +103,12 @@ MonoBehaviour:
     m_Bits: 4294967295
   segmentResolution: 0.05
   pointA: {x: 0, y: 0, z: 0}
-  pointB: {x: 0, y: 0, z: 1}
+  pointB: {x: 0, y: 0, z: 1.5}
   radius: 0.5
   offset: {x: 0, y: 0, z: 0}
   boxInterframePredictions: 5
-  boxCenter: {x: -1.29, y: -0.07, z: -0.09}
-  boxSize: {x: -1.62, y: -0.85, z: 0.44}
+  boxCenter: {x: -1.2, y: -0.03, z: 0.02}
+  boxSize: {x: 1.77, y: -0.68, z: 0.34}
   debugMode: 1
   EventAttackStart:
     m_PersistentCalls:
@@ -122,7 +122,7 @@ MonoBehaviour:
   EventAttackRecovery:
     m_PersistentCalls:
       m_Calls: []
-  enableWeaponTrail: 0
-  trailMaterial: {fileID: 2100000, guid: 06003196ec1a99b438a60183d711072f, type: 2}
+  enableWeaponTrail: 1
+  trailMaterial: {fileID: 2100000, guid: 69173672e381a4a679d1a4608e15f715, type: 2}
   trailGranularity: 60
   trailDuration: 0.5
