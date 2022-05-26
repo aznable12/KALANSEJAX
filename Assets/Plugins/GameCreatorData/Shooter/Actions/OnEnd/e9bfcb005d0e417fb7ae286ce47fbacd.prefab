@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2625421303472325533}
   - component: {fileID: 8287824675791202586}
   - component: {fileID: 2235947842565729313}
+  - component: {fileID: 2199971743939711405}
   m_Layer: 0
   m_Name: e9bfcb005d0e417fb7ae286ce47fbacd
   m_TagString: Untagged
@@ -28,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,6 +66,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 2199971743939711405}
   executingIndex: -1
   isExecuting: 0
+--- !u!114 &2199971743939711405
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912451800655635726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3594c19efd77940c7b2a014b386a0922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  audioClip: {fileID: 8300000, guid: 130f1b88264d3446a82ec430f8ce0d1d, type: 3}
+  fadeOut: 0
