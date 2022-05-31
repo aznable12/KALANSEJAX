@@ -17,7 +17,11 @@
         public enum ActionKey
         {
             A, B, C,
-            D, E, F
+            D, E, F,
+            G, H, I,
+            J, K, L,
+            M, N, O,
+            P, Q, R
         }
 
         public enum HitResult
@@ -37,6 +41,7 @@
         private const CharacterAnimation.Layer LAYER_DEFEND = CharacterAnimation.Layer.Layer3;
 
         // PROPERTIES: ----------------------------------------------------------------------------
+        public MeleeWeapon sheathedHitReactions;
 
         public MeleeWeapon currentWeapon;
         public MeleeShield currentShield;
@@ -78,7 +83,7 @@
 
         // PRIVATE PROPERTIES: --------------------------------------------------------------------
 
-        private GameObject modelWeapon;
+        private List<GameObject> modelWeapons;
         private GameObject modelShield;
 
         private MeleeClip currentMeleeClip;
@@ -99,7 +104,7 @@
 
         public Character Character { get; private set; }
         public CharacterAnimator CharacterAnimator { get; private set; }
-        public BladeComponent Blade { get; private set; }
+        public List<BladeComponent> Blades { get; private set; }
 
         // INITIALIZERS: --------------------------------------------------------------------------
 
@@ -149,56 +154,66 @@
                 int phase = this.comboSystem.GetCurrentPhase();
                 this.IsAttacking = phase >= 0f;
 
-                if (this.Blade != null && phase == 1)
+                if (this.Blades != null && this.Blades.Count > 0 && phase == 1)
                 {
-                    GameObject[] hits = this.Blade.CaptureHits();
-                    for (int i = 0; i < hits.Length; ++i)
+                    foreach (var blade in this.Blades)
                     {
-                        int hitInstanceID = hits[i].GetInstanceID();
+                        if (!this.currentMeleeClip.affectedBones.Contains(blade.bone)) continue;
 
-                        if (this.targetsEvaluated.Contains(hitInstanceID)) continue;
-                        if (hits[i].transform.IsChildOf(this.transform)) continue;
-
-                        HitResult hitResult = HitResult.ReceiveDamage;
-
-                        CharacterMelee targetMelee = hits[i].GetComponent<CharacterMelee>();
-                        MeleeClip attack = this.comboSystem.GetCurrentClip();
-
-                        if (targetMelee != null)
+                        GameObject[] hits = blade.CaptureHits();
+                        for (int i = 0; i < hits.Length; ++i)
                         {
-                            hitResult = targetMelee.OnReceiveAttack(this, attack);
-                        }
+                            int hitInstanceID = hits[i].GetInstanceID();
 
-                        IgniterMeleeOnReceiveAttack[] triggers = (
-                            hits[i].GetComponentsInChildren<IgniterMeleeOnReceiveAttack>()
-                        );
+                            if (this.targetsEvaluated.Contains(hitInstanceID)) continue;
+                            if (hits[i].transform.IsChildOf(this.transform)) continue;
 
-                        bool hitSomething = triggers.Length > 0;
-                        if (hitSomething)
-                        {
-                            for (int j = 0; j < triggers.Length; ++j)
+                            HitResult hitResult = HitResult.ReceiveDamage;
+
+                            CharacterMelee targetMelee = hits[i].GetComponent<CharacterMelee>();
+                            MeleeClip attack = this.comboSystem.GetCurrentClip();
+
+                            if (targetMelee != null)
                             {
-                                triggers[j].OnReceiveAttack(this, attack, hitResult);
+                                hitResult = targetMelee.OnReceiveAttack(this, attack, blade);
                             }
-                        }
-                        
-                        if (hitSomething && attack != null && targetMelee != null)
-                        {
-                            Vector3 position = this.Blade.GetImpactPosition();
-                            attack.ExecuteActionsOnHit(position, hits[i].gameObject);
-                        }
 
-                        if (attack != null && attack.pushForce > float.Epsilon)
-                        {
-                            Rigidbody[] rigidbodies = hits[i].GetComponents<Rigidbody>();
-                            for (int j = 0; j < rigidbodies.Length; ++j)
+                            IgniterMeleeOnReceiveAttack[] triggers = (
+                                hits[i].GetComponentsInChildren<IgniterMeleeOnReceiveAttack>()
+                            );
+
+                            bool hitSuccess = triggers.Length > 0;
+                            if (hitSuccess)
                             {
-                                Vector3 direction = rigidbodies[j].transform.position - transform.position;
-                                rigidbodies[j].AddForce(direction.normalized * attack.pushForce, ForceMode.Impulse);
+                                for (int j = 0; j < triggers.Length; ++j)
+                                {
+                                    triggers[j].OnReceiveAttack(this, attack, hitResult);
+                                }
                             }
-                        }
 
-                        this.targetsEvaluated.Add(hitInstanceID);
+                            if (hitSuccess || targetMelee != null)
+                            {
+                                Vector3 position = blade.GetImpactPosition();
+                                attack.ExecuteActionsOnHit(position, hits[i].gameObject);
+                            }
+                            try
+                            {
+                                if (attack.pushForce > float.Epsilon)
+                                {
+                                    Rigidbody[] rigidbodies = hits[i].GetComponents<Rigidbody>();
+                                    for (int j = 0; j < rigidbodies.Length; ++j)
+                                    {
+                                        Vector3 direction = rigidbodies[j].transform.position - transform.position;
+                                        rigidbodies[j].AddForce(direction.normalized * attack.pushForce, ForceMode.Impulse);
+                                    }
+                                }
+                            }
+                            catch(NullReferenceException e)
+                            {
+                                Debug.Log("Known bug caught:\n" + e.StackTrace );
+                            }
+                            this.targetsEvaluated.Add(hitInstanceID);
+                        }
                     }
                 }
             }
@@ -256,9 +271,11 @@
             yield return wait;
 
             if (this.EventSheatheWeapon != null) this.EventSheatheWeapon.Invoke(this.currentWeapon);
-            if (this.modelWeapon != null) Destroy(this.modelWeapon);
+            if (this.modelWeapons != null) foreach (var model in modelWeapons) Destroy(model);
+            
             if (this.modelShield != null) Destroy(this.modelShield);
 
+            Blades = null;
             this.OnSheatheWeapon();
 
             yield return wait;
@@ -314,9 +331,14 @@
 
                 if (this.EventDrawWeapon != null) this.EventDrawWeapon.Invoke(this.currentWeapon);
 
-                this.modelWeapon = this.currentWeapon.EquipWeapon(this.CharacterAnimator);
-                this.Blade = this.modelWeapon.GetComponentInChildren<BladeComponent>();
-                if (this.Blade != null) this.Blade.Setup(this);
+                this.modelWeapons = this.currentWeapon.EquipWeapon(this.CharacterAnimator);
+                this.Blades = new List<BladeComponent>();
+                foreach(var model in modelWeapons)
+                {
+                    var blade = model.GetComponent<BladeComponent>();
+                    Blades.Add(blade);
+                    if (blade != null) blade.Setup(this);
+                }
 
                 this.OnDrawWeapon();
 
@@ -400,7 +422,7 @@
             if (audioClip == null) return;
 
             Vector3 position = transform.position;
-            if (this.Blade != null) position = this.Blade.transform.position;
+            if (this.Blades != null && this.Blades.Count > 0) position = this.Blades[0].transform.position;
 
             float pitch = UnityEngine.Random.Range(MIN_RAND_PITCH, MAX_RAND_PITCH);
             AudioMixerGroup soundMixer = DatabaseGeneral.Load().soundAudioMixer;
@@ -415,7 +437,8 @@
         {
             if (!this.IsStaggered && posture == MeleeClip.Posture.Stagger)
             {
-                this.comboSystem.Stop();
+                if(this.comboSystem != null)
+                    this.comboSystem.Stop();
                 if (EventStagger != null) EventStagger.Invoke();
             }
 
@@ -499,21 +522,26 @@
 
         // CALLBACK METHODS: ----------------------------------------------------------------------
 
-        public HitResult OnReceiveAttack(CharacterMelee attacker, MeleeClip attack)
+        public HitResult OnReceiveAttack(CharacterMelee attacker, MeleeClip attack, BladeComponent blade)
         {
-            if (this.currentWeapon == null) return HitResult.ReceiveDamage;
             if (this.IsInvincible) return HitResult.Ignore;
 
-            if (this.Blade == null)
-            {
-                Debug.LogError("No BladeComponent found. Add one in your Weapon Asset", this);
-                return HitResult.Ignore;
-            }
+            MeleeWeapon hitReactionWeapon;
+            if (this.currentWeapon == null)
+                if(sheathedHitReactions == null)
+                    return HitResult.ReceiveDamage;
+                else { hitReactionWeapon = sheathedHitReactions; }
+            else { hitReactionWeapon = currentWeapon; }
+            
+            Vector3 delta = blade.transform.position - (this.transform.position + this.Character.characterLocomotion.characterController.center);
+            Quaternion look = Quaternion.LookRotation(delta);
+            float attackAngleV = look.eulerAngles.x;
 
-            float attackAngle = Vector3.Angle(
+            float attackAngleH = Vector3.Angle(
                 attacker.transform.TransformDirection(Vector3.forward),
                 this.transform.TransformDirection(Vector3.forward)
             );
+
 
             float defenseAngle = this.currentShield != null
                 ? this.currentShield.defenseAngle.GetValue(gameObject)
@@ -521,7 +549,7 @@
 
             if (this.currentShield != null &&
                 attack.isBlockable && this.IsBlocking &&
-                180f - attackAngle < defenseAngle/2f)
+                180f - attackAngleH < defenseAngle/2f)
             {
                 this.AddDefense(-attack.defenseDamage);
                 if (this.Defense > 0)
@@ -543,7 +571,7 @@
                         }
 
                         this.ExecuteEffects(
-                            this.Blade.GetImpactPosition(),
+                            blade.GetImpactPosition(),
                             this.currentShield.audioPerfectBlock,
                             this.currentShield.prefabImpactPerfectBlock
                         );
@@ -556,7 +584,7 @@
                     if (blockReaction != null) blockReaction.Play(this);
 
                     this.ExecuteEffects(
-                        this.Blade.GetImpactPosition(),
+                        blade.GetImpactPosition(),
                         this.currentShield.audioBlock,
                         this.currentShield.prefabImpactBlock
                     );
@@ -574,23 +602,36 @@
             }
 
             this.AddPoise(-attack.poiseDamage);
-            bool isFrontalAttack = attackAngle >= 90f;
-            bool isKnockback = this.Poise <= float.Epsilon;
+            bool isFrontalAttack = attackAngleH >= 90f;
+            MeleeWeapon.HitLocation hitLocation;
+            if(attackAngleV > 90+30)
+            {
+                hitLocation = isFrontalAttack ? MeleeWeapon.HitLocation.FrontUpper : MeleeWeapon.HitLocation.BackUpper;
+            }
+            else if(attackAngleV < 90 - 30)
+            {
+                hitLocation = isFrontalAttack ? MeleeWeapon.HitLocation.FrontMiddle : MeleeWeapon.HitLocation.BackMiddle;
+            }
+            else
+            {
+                hitLocation = isFrontalAttack ? MeleeWeapon.HitLocation.FrontLower : MeleeWeapon.HitLocation.BackLower;
+            }
 
-            MeleeClip hitReaction = this.currentWeapon.GetHitReaction(
+            bool isKnockback = this.Poise <= float.Epsilon;
+            MeleeClip hitReaction = hitReactionWeapon.GetHitReaction(
                 this.Character.IsGrounded(),
-                isFrontalAttack,
+                hitLocation,
                 isKnockback
             );
 
             this.ExecuteEffects(
-                attacker.Blade.GetImpactPosition(),
+                blade.GetImpactPosition(),
                 isKnockback
-                    ? attacker.currentWeapon.audioImpactKnockback
-                    : attacker.currentWeapon.audioImpactNormal,
+                    ? hitReactionWeapon.audioImpactKnockback
+                    : hitReactionWeapon.audioImpactNormal,
                 isKnockback
-                    ? attacker.currentWeapon.prefabImpactKnockback
-                    : attacker.currentWeapon.prefabImpactNormal
+                    ? hitReactionWeapon.prefabImpactKnockback
+                    : hitReactionWeapon.prefabImpactNormal
             );
 
             attack.ExecuteHitPause();

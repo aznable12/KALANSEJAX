@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7317248210095603147}
   - component: {fileID: 7133524807627556190}
-  - component: {fileID: -9147346588504374556}
   - component: {fileID: 4335106784630890709}
+  - component: {fileID: 1997255653311542942}
   m_Layer: 0
   m_Name: 122cd85ae28447a6800f1099b77e573b
   m_TagString: Untagged
@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,40 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conditions:
   - {fileID: 4335106784630890709}
-  - {fileID: -9147346588504374556}
---- !u!114 &-9147346588504374556
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2188339259917620070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785cb305d201f4393971d500f2b77155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isExpanded: 1
-  character:
-    target: 1
-    character: {fileID: 0}
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    global:
-      allowTypesMask: 512
-      name: 
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-  condition: 0
+  - {fileID: 1997255653311542942}
 --- !u!114 &4335106784630890709
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -96,7 +64,7 @@ MonoBehaviour:
   isExpanded: 1
   target:
     target: 2
-    gameObject: {fileID: 7438423224559480480, guid: 42306137a6458ac45bc624d163af08d5, type: 3}
+    gameObject: {fileID: 2135970738225947095, guid: d0202d86d82bd6945a8310050e87acec, type: 3}
     global:
       allowTypesMask: 512
       name: 
@@ -132,3 +100,36 @@ MonoBehaviour:
       select: 1
       index: 0
   percent: 0.5
+--- !u!114 &1997255653311542942
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188339259917620070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785cb305d201f4393971d500f2b77155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  character:
+    target: 1
+    character: {fileID: 0}
+    local:
+      allowTypesMask: 512
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    global:
+      allowTypesMask: 512
+      name: 
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+    eventChangeVariable:
+      m_PersistentCalls:
+        m_Calls: []
+  condition: 0

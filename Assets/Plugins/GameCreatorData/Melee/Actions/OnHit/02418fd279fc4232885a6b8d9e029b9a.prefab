@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,7 +121,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
-  attribute: {fileID: 114291937499452772, guid: 0b2ffcd7c03f643b9a75e3c1bf527df0, type: 2}
+  attribute: {fileID: 114291937499452772, guid: 13a47c4320394d245ba3e273864cf059, type: 2}
   operation: 2
   valueType: 0
   amount:
@@ -128,7 +129,7 @@ MonoBehaviour:
     value: 1
     global:
       allowTypesMask: 4
-      name: PlayerDamageStrength
+      name: PlayerAttackBasic
     local:
       allowTypesMask: 4
       name: 
