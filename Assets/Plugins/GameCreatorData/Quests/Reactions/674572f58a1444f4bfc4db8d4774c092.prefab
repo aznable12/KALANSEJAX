@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 114683197752402010}
   - component: {fileID: 114890785678132778}
   - component: {fileID: 114279400075154994}
+  - component: {fileID: -1042124064372254755}
+  - component: {fileID: -1905865276227339227}
   m_Layer: 0
   m_Name: 674572f58a1444f4bfc4db8d4774c092
   m_TagString: Untagged
@@ -33,6 +35,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed1d9880e2ba45b0b16d09f57c5b9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditions: {fileID: 0}
+  conditions: {fileID: -1042124064372254755}
   onComplete: {fileID: 114984249092260278}
-  onFail: {fileID: 0}
+  onFail: {fileID: -1905865276227339227}
 --- !u!114 &114984249092260278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +150,31 @@ MonoBehaviour:
   isExpanded: 0
   quest: {fileID: 114025235498648472, guid: e191f3c1acbc748bb8a12d55c14118f1, type: 2}
   status: 1
+--- !u!114 &-1042124064372254755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826259292352769893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions: []
+--- !u!114 &-1905865276227339227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826259292352769893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  executingIndex: -1
+  isExecuting: 0
