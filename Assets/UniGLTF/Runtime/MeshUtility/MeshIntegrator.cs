@@ -6,9 +6,8 @@ namespace UniGLTF.MeshUtility
 {
     public class MeshIntegrator
     {
-        public const string INTEGRATED_MESH_WITHOUT_BLENDSHAPE_NAME = "Integrated(WithoutBlendShape)";
-        public const string INTEGRATED_MESH_WITH_BLENDSHAPE_NAME = "Integrated(WithBlendShape)";
-        public const string INTEGRATED_MESH_ALL_NAME = "Integrated(All)";
+        public const string INTEGRATED_MESH_NAME = "MeshesIntegrated";
+        public const string INTEGRATED_MESH_BLENDSHAPE_NAME = "MeshesBlendShapeIntegrated";
 
         struct SubMesh
         {
@@ -26,7 +25,7 @@ namespace UniGLTF.MeshUtility
             public Vector3[] Tangents;
         }
 
-        MeshIntegrationResult Result { get; } = new MeshIntegrationResult();
+        public MeshIntegrationResult Result { get; } = new MeshIntegrationResult();
         List<Vector3> Positions { get; } = new List<Vector3>();
         List<Vector3> Normals { get; } = new List<Vector3>();
         List<Vector2> UV { get; } = new List<Vector2>();
@@ -231,7 +230,7 @@ namespace UniGLTF.MeshUtility
             }
         }
 
-        public MeshIntegrationResult Integrate(MeshEnumerateOption onlyBlendShapeRenderers)
+        public void Intgrate(bool onlyBlendShapeRenderers)
         {
             var mesh = new Mesh();
 
@@ -253,49 +252,24 @@ namespace UniGLTF.MeshUtility
             }
             mesh.bindposes = BindPoses.ToArray();
 
-            // blendshape
-            switch (onlyBlendShapeRenderers)
+            if (onlyBlendShapeRenderers)
             {
-                case MeshEnumerateOption.OnlyWithBlendShape:
-                    {
-                        AddBlendShapesToMesh(mesh);
-                        mesh.name = INTEGRATED_MESH_WITH_BLENDSHAPE_NAME;
-                        break;
-                    }
-
-                case MeshEnumerateOption.All:
-                    {
-                        AddBlendShapesToMesh(mesh);
-                        mesh.name = INTEGRATED_MESH_ALL_NAME;
-                        break;
-                    }
-
-                case MeshEnumerateOption.OnlyWithoutBlendShape:
-                    {
-                        mesh.name = INTEGRATED_MESH_WITHOUT_BLENDSHAPE_NAME;
-                        break;
-                    }
+                AddBlendShapesToMesh(mesh);
+                mesh.name = INTEGRATED_MESH_BLENDSHAPE_NAME;
+            }
+            else
+            {
+                mesh.name = INTEGRATED_MESH_NAME;
             }
 
-            // meshName
             var meshNode = new GameObject();
-            switch (onlyBlendShapeRenderers)
+            if (onlyBlendShapeRenderers)
             {
-                case MeshEnumerateOption.OnlyWithBlendShape:
-                    {
-                        meshNode.name = INTEGRATED_MESH_WITH_BLENDSHAPE_NAME;
-                        break;
-                    }
-                case MeshEnumerateOption.OnlyWithoutBlendShape:
-                    {
-                        meshNode.name = INTEGRATED_MESH_WITHOUT_BLENDSHAPE_NAME;
-                        break;
-                    }
-                case MeshEnumerateOption.All:
-                    {
-                        meshNode.name = INTEGRATED_MESH_ALL_NAME;
-                        break;
-                    }
+                meshNode.name = "MeshIntegrator(BlendShape)";
+            }
+            else
+            {
+                meshNode.name = "MeshIntegrator";
             }
 
             var integrated = meshNode.AddComponent<SkinnedMeshRenderer>();
@@ -304,7 +278,6 @@ namespace UniGLTF.MeshUtility
             integrated.bones = Bones.ToArray();
             Result.IntegratedRenderer = integrated;
             Result.MeshMap.Integrated = mesh;
-            return Result;
         }
     }
 }

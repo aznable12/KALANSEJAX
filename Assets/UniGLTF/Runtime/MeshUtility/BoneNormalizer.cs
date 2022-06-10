@@ -424,10 +424,7 @@ namespace UniGLTF.MeshUtility
             dstRenderer.sharedMaterials = srcRenderer.sharedMaterials;
             if (srcRenderer.rootBone != null)
             {
-                if (boneMap.TryGetValue(srcRenderer.rootBone, out Transform found))
-                {
-                    dstRenderer.rootBone = found;
-                }
+                dstRenderer.rootBone = boneMap[srcRenderer.rootBone];
             }
             dstRenderer.bones = dstBones;
             dstRenderer.sharedMesh = mesh;

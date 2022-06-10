@@ -12,8 +12,7 @@ UNITY_DECLARE_TEX2D(_EmissionMap);
 UNITY_DECLARE_TEX2D(_MatcapTex);
 UNITY_DECLARE_TEX2D(_RimTex);
 UNITY_DECLARE_TEX2D(_OutlineWidthTex);
-// NOTE: "tex2d() * _Time.y" returns mediump value if sampler is half precision in Android VR platform
-UNITY_DECLARE_TEX2D_FLOAT(_UvAnimMaskTex);
+UNITY_DECLARE_TEX2D(_UvAnimMaskTex);
 
 CBUFFER_START(UnityPerMaterial)
 // Vector
@@ -36,9 +35,9 @@ half _RimLift;
 half _RimLightingMix;
 half _OutlineWidth;
 half _OutlineLightingMix;
-float _UvAnimScrollXSpeed;
-float _UvAnimScrollYSpeed;
-float _UvAnimRotationSpeed;
+half _UvAnimScrollXSpeed;
+half _UvAnimScrollYSpeed;
+half _UvAnimRotationSpeed;
 CBUFFER_END
 
 // No Using on shader

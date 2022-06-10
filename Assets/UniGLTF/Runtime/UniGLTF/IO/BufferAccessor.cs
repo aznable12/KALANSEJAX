@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.InteropServices;
 using Unity.Collections;
-using UnityEngine;
 
 namespace UniGLTF
 {
@@ -157,57 +157,11 @@ namespace UniGLTF
             }
             switch (ComponentType)
             {
-                case AccessorValueType.UNSIGNED_BYTE:
-                    return ArrayManager.Convert(Bytes, (byte x) => (int)x);
-
                 case AccessorValueType.UNSIGNED_SHORT:
                     return ArrayManager.Convert(Bytes.Reinterpret<ushort>(1), (ushort x) => (int)x);
 
                 case AccessorValueType.UNSIGNED_INT:
                     return Bytes.Reinterpret<Int32>(1);
-
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
-        // BoneWeight用
-        public NativeArray<Vector4> GetAsVector4Array()
-        {
-            if (AccessorType != AccessorVectorType.VEC4)
-            {
-                throw new InvalidOperationException("not VEC4");
-            }
-            switch (ComponentType)
-            {
-                case AccessorValueType.FLOAT:
-                    return Bytes.Reinterpret<Vector4>(1);
-
-                case AccessorValueType.UNSIGNED_BYTE:
-                    return ArrayManager.Convert(Bytes.Reinterpret<Byte4>(1), (Byte4 b) => new Vector4(b.x / 255.0f, b.y / 255.0f, b.z / 255.0f, b.w / 255.0f));
-
-                case AccessorValueType.UNSIGNED_SHORT:
-                    return ArrayManager.Convert(Bytes.Reinterpret<UShort4>(1), (UShort4 b) => new Vector4(b.x / 65535.0f, b.y / 65535.0f, b.z / 65535.0f, b.w / 65535.0f));
-
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
-        // BoneJoint用
-        public NativeArray<SkinJoints> GetAsSkinJointsArray()
-        {
-            if (AccessorType != AccessorVectorType.VEC4)
-            {
-                throw new InvalidOperationException("not VEC4");
-            }
-            switch (ComponentType)
-            {
-                case AccessorValueType.UNSIGNED_BYTE:
-                    return ArrayManager.Convert(Bytes.Reinterpret<Byte4>(1), (Byte4 b) => new SkinJoints(b.x, b.y, b.z, b.w));
-
-                case AccessorValueType.UNSIGNED_SHORT:
-                    return Bytes.Reinterpret<SkinJoints>(1);
 
                 default:
                     throw new NotImplementedException();
@@ -284,7 +238,7 @@ namespace UniGLTF
                 for (int i = 0; i < values.Length; ++i)
                 {
                     var v = values[i];
-                    if (v != Vector3.zero)
+                    if (v != Vector3.Zero)
                     {
                         sparseValuesWithIndex.Add((i, v));
                     }

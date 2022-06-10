@@ -32,8 +32,7 @@ half _OutlineWidth;
 half _OutlineScaledMaxDistance;
 fixed4 _OutlineColor;
 half _OutlineLightingMix;
-// NOTE: "tex2d() * _Time.y" returns mediump value if sampler is half precision in Android VR platform
-sampler2D_float _UvAnimMaskTexture;
+sampler2D _UvAnimMaskTexture;
 float _UvAnimScrollX;
 float _UvAnimScrollY;
 float _UvAnimRotation;

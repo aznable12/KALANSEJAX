@@ -231,10 +231,6 @@ namespace VRM
             // すべてのSkinnedMeshRendererを列挙する
             foreach (var renderer in m_items.Select(x => x.SkinnedMeshRenderer))
             {
-                if (renderer == null)
-                {
-                    continue;
-                }
                 var mesh = renderer.sharedMesh;
                 if (mesh != null && mesh.blendShapeCount > 0)
                 {
