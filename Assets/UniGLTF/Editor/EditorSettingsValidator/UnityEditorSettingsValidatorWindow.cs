@@ -12,9 +12,7 @@ namespace UniGLTF.EditorSettingsValidator
 
         static UnityEditorSettingsValidatorWindow()
         {
-#if !UNITY_WEBGL
             EditorApplication.update += Validate;
-#endif
         }
 
         private static void Validate()
@@ -28,9 +26,7 @@ namespace UniGLTF.EditorSettingsValidator
 
         private void OnProjectChange()
         {
-#if !UNITY_WEBGL
             Validate();
-#endif
         }
 
         private void OnGUI()

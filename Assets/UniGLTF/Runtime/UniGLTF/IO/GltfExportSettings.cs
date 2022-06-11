@@ -1,7 +1,6 @@
 
 
 using System;
-using UnityEngine;
 
 namespace UniGLTF
 {
@@ -38,15 +37,13 @@ namespace UniGLTF
         ;
 
         /// <summary>
+        /// VRMC_materials_hdr_emissiveMultiplier
+        /// </summary>
+        public bool UseEmissiveMultiplier;
+
+        /// <summary>
         /// Keep VertexColor
         /// </summary>
         public bool KeepVertexColor;
-
-        /// <summary>
-        /// https://github.com/vrm-c/UniVRM/issues/1582
-        /// 
-        /// Allowed hide flags for MeshFilters to be exported
-        /// </summary>
-        public HideFlags MeshFilterAllowedHideFlags = HideFlags.None;
     }
 }

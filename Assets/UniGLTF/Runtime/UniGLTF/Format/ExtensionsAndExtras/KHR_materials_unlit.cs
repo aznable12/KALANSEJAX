@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UniJSON;
 
 namespace UniGLTF
@@ -42,17 +43,9 @@ namespace UniGLTF
             return false;
         }
 
-        public static void Serialize(ref glTFExtension materialExtensions)
+        public static glTFExtension Serialize()
         {
-            glTFExtensionExport.GetOrCreate(ref materialExtensions).Add(ExtensionName, new ArraySegment<byte>(Raw));
-        }
-
-        public static glTFExtensionImport ForTest()
-        {
-            var extensionExport = new glTFExtensionExport();
-            glTFExtension extension = extensionExport;
-            glTF_KHR_materials_unlit.Serialize(ref extension);
-            return extensionExport.Deserialize();
+            return new glTFExtensionExport().Add(ExtensionName, new ArraySegment<byte>(Raw));
         }
     }
 }
