@@ -24,9 +24,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
   - DR_OUTLINE_ON
+  m_InvalidKeywords:
   - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _TEXTUREBLENDINGMODE_MULTIPLY
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -150,7 +150,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 0
-    - _SelfShadingSize: 0
+    - _SelfShadingSize: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
