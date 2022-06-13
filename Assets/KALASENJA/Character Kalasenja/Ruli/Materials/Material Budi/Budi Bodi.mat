@@ -20,14 +20,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material #29.002
+  m_Name: Budi Bodi
   m_Shader: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
   m_ValidKeywords:
   - N_F_EAL_ON
   - N_F_O_ON
+  - N_F_PT_ON
   - N_F_RELGI_ON
   - N_F_SS_ON
+  - N_F_ST_ON
   - N_F_TRANSAFFSHA_ON
+  - N_F_TRANS_ON
   m_InvalidKeywords:
   - N_F_TRANSAFFSHA
   - _CUSTOMLIGHTDIRECTIONFOLLOWOBJECTROTATION_OFF
@@ -56,8 +59,9 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -103,7 +107,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 91f487442b804e04c87d235ef9688223, type: 3}
+        m_Texture: {fileID: 2800000, guid: 57b0abed857db094caf40d4311a365fa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskGloss:
@@ -139,7 +143,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 57b0abed857db094caf40d4311a365fa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -155,7 +159,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowT:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 57b0abed857db094caf40d4311a365fa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -178,8 +182,8 @@ Material:
     m_Floats:
     - _AlphaBaseCutout: 1
     - _AlphaClip: 0
-    - _BleModDest: 0
-    - _BleModSour: 1
+    - _BleModDest: 10
+    - _BleModSour: 5
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -245,14 +249,14 @@ Material:
     - _N_F_NM: 0
     - _N_F_O: 1
     - _N_F_OFLMB: 0
-    - _N_F_PT: 0
+    - _N_F_PT: 1
     - _N_F_R: 0
     - _N_F_RL: 0
     - _N_F_SCT: 0
     - _N_F_SL: 0
     - _N_F_SON: 0
     - _N_F_SS: 1
-    - _N_F_ST: 0
+    - _N_F_ST: 1
     - _N_F_STIAL: 0
     - _N_F_STIS: 0
     - _NoisyOutlineIntensity: 0
@@ -313,7 +317,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TEXMCOLINT: 1
-    - _TRANSMODE: 0
+    - _TRANSMODE: 1
     - _TexturePatternStyle: 0
     - _TransAffSha: 1
     - _TransparentThreshold: 0
